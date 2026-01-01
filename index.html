@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibe’n — Vibe Coding Course</title>
+  <meta name="description" content="Vibe’n — a 5-minute intro to the Vibe Coding Course. Pay to unlock gated content." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Graffiti-ish display font + clean UI font -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="bgGlow"></div>
+    <div class="noise"></div>
+  </div>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Vibe’n hero">
+      <div class="sprayTop"></div>
+
+      <div class="heroInner">
+        <header class="brand">
+          <div class="badge" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot dot2"></span>
+            <span class="dot dot3"></span>
+          </div>
+
+          <h1 class="logoText">
+            <span class="logoWord">Vibe’n</span>
+          </h1>
+
+          <p class="tagline">
+            5-minute intro. Pay once. Unlock the gated course.
+          </p>
+        </header>
+
+        <!-- VIDEO -->
+        <section class="videoCard" aria-label="Intro video">
+          <div class="videoTop">
+            <span class="pill">INTRO VIDEO</span>
+            <span class="hint">≈ 5:00</span>
+          </div>
+
+          <div class="videoFrame">
+            <!-- Replace this iframe with your final video embed -->
+            <!-- YouTube example: https://www.youtube.com/embed/VIDEO_ID -->
+            <!-- Vimeo example: https://player.vimeo.com/video/VIDEO_ID -->
+            <!-- IPFS: you can use an <video> tag instead; see comment below -->
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Vibe’n Intro"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <!-- IPFS/MP4 alternative:
+            <video controls playsinline>
+              <source src="https://ipfs.io/ipfs/YOUR_CID" type="video/mp4" />
+            </video>
+            -->
+          </div>
+
+          <div class="videoBottom">
+            <div class="micro">
+              <span class="spark"></span>
+              No fluff. Proof build mindset.
+            </div>
+            <a class="link" href="#pay">Jump to payment rails →</a>
+          </div>
+        </section>
+
+        <!-- PAYMENT RAILS -->
+        <section id="pay" class="payCard" aria-label="Payment rails">
+          <div class="payTop">
+            <span class="pill">PAYMENT RAILS</span>
+            <span class="hint">Choose one</span>
+          </div>
+
+          <div class="payGrid">
+            <!-- Option 1 -->
+            <a class="payBtn" href="https://YOUR-STRIPE-LINK" target="_blank" rel="noreferrer">
+              <div class="payIcon" aria-hidden="true">💳</div>
+              <div class="payText">
+                <div class="payTitle">Card / Apple Pay (Stripe)</div>
+                <div class="paySub">Fastest checkout</div>
+              </div>
+              <div class="chev" aria-hidden="true">→</div>
+            </a>
+
+            <!-- Option 2 -->
+            <a class="payBtn" href="https://YOUR-COINBASE-COMMERCE-LINK" target="_blank" rel="noreferrer">
+              <div class="payIcon" aria-hidden="true">⛓️</div>
+              <div class="payText">
+                <div class="payTitle">Crypto (Coinbase Commerce)</div>
+                <div class="paySub">USDC / ETH / more</div>
+              </div>
+              <div class="chev" aria-hidden="true">→</div>
+            </a>
+
+            <!-- Option 3 -->
+            <a class="payBtn" href="https://YOUR-BTCPAY-INVOICE-OR-STORE" target="_blank" rel="noreferrer">
+              <div class="payIcon" aria-hidden="true">₿</div>
+              <div class="payText">
+                <div class="payTitle">Bitcoin (BTCPay)</div>
+                <div class="paySub">Direct BTC payments</div>
+              </div>
+              <div class="chev" aria-hidden="true">→</div>
+            </a>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- ACCESS CTA (destination is your gated content) -->
+          <div class="accessRow">
+            <div class="accessText">
+              <div class="accessTitle">Already paid?</div>
+              <div class="accessSub">
+                Hit access. If you’re gating by code/token, send them to your gate page here.
+              </div>
+            </div>
+            <a class="accessBtn" href="https://YOUR-GATED-CONTENT-LINK" target="_blank" rel="noreferrer">
+              Access Gated Content
+              <span class="glowArrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="fineprint">
+            Note: This page is intentionally minimal. Payments open in a new tab; gating happens on your access page.
+          </p>
+        </section>
+      </div>
+
+      <div class="sprayBottom"></div>
+    </section>
+
+    <footer class="footer">
+      <span class="footerLine"></span>
+      <span class="footerText">© <span id="year"></span> Vibe’n</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
