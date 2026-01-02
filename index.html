@@ -1,208 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
   <meta name="description" content="5-minute intro. Pay once. Unlock the gated course." />
-  <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body>
-  <!-- Background layers -->
+<body class="hasBg">
+  <!-- Background -->
   <div class="bg" aria-hidden="true"></div>
   <div class="bgOverlay" aria-hidden="true"></div>
 
-  <!-- Top bar -->
+  <!-- Top Nav -->
   <header class="topbar">
-    <div class="brand">
-      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
+    <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
       <div class="brandText">
         <div class="brandTitle">Vibe’n</div>
         <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
       </div>
-    </div>
+    </a>
 
-    <div class="statusPill">Urban • Neon • Wallet-gated</div>
+    <nav class="navTabs" aria-label="Primary">
+      <a class="tab" href="./access.html">Wallet Connect</a>
+      <a class="tab" href="./fiat.html">Fiat Payment</a>
+      <a class="tab" href="./crypto.html">Crypto Payment</a>
+      <a class="tab tabActive" href="./buy-crypto.html">Buy Crypto</a>
+    </nav>
   </header>
 
   <main class="wrap">
-    <!-- HERO -->
+    <!-- HERO CARD -->
     <section class="heroCard">
-      <div class="heroLeft">
-        <h1 class="heroH1">Build fast. Ship clean. Get paid.</h1>
-        <p class="heroP">
+      <div class="heroCopy">
+        <h1>Build fast. Ship clean. Get paid.</h1>
+        <p class="lede">
           Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
         </p>
 
         <div class="ctaRow">
-          <button class="cta ctaFiat" data-modal="modal-fiat">
+          <a class="cta ctaFiat" href="./fiat.html">
             <span class="ctaTitle">Fiat Pay</span>
             <span class="ctaSub">Card / Apple Pay</span>
-          </button>
+          </a>
 
-          <button class="cta ctaCrypto" data-modal="modal-crypto">
+          <a class="cta ctaCrypto" href="./crypto.html">
             <span class="ctaTitle">Crypto Pay</span>
             <span class="ctaSub">USDC / ETH</span>
-          </button>
+          </a>
 
-          <button class="cta ctaBuy" data-modal="modal-buy">
+          <a class="cta ctaBuy" href="./buy-crypto.html">
             <span class="ctaTitle">Buy Crypto</span>
             <span class="ctaSub">Step-by-step</span>
-          </button>
-        </div>
-
-        <div class="microNote">
-          Tip: Use the buttons above — this page stays clean by design.
+          </a>
         </div>
       </div>
 
-      <div class="heroRight">
-        <div class="videoShell">
-          <div class="videoTop">
-            <span class="videoLabel">INTRO VIDEO</span>
-            <span class="videoTime">≈ 5:00</span>
-          </div>
+      <!-- VIDEO (directly under headline area, inside hero card) -->
+      <div class="videoCard" aria-label="Intro video">
+        <div class="videoTop">
+          <div class="chip">INTRO VIDEO</div>
+          <div class="chip chipGhost">≈ 5:00</div>
+        </div>
 
-          <!-- Replace the src video id with YOUR intro video -->
-          <div class="videoFrame">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&playsinline=1"
-              title="Vibe’n Intro Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
+        <!-- Replace the src with your real intro video when ready -->
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vibe’n Intro"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
 
-          <div class="videoBottom">
-            <span class="dot"></span>
-            <span>No fluff. Proof build mindset.</span>
-          </div>
+        <div class="videoFoot">
+          <span class="dot"></span>
+          <span>No fluff. Proof build mindset.</span>
+          <a class="miniLink" href="./fiat.html">Go to payments →</a>
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <span>Vibe’n</span>
-      <span class="sep">•</span>
-      <span>Pay once. Unlock forever.</span>
-    </footer>
   </main>
 
-  <!-- MODALS (lightweight placeholders; wire later) -->
-  <div class="modal" id="modal-fiat" aria-hidden="true">
-    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Fiat Pay">
-      <div class="modalHead">
-        <div>
-          <div class="modalTitle">Fiat Pay</div>
-          <div class="modalSub">Card / Apple Pay checkout</div>
-        </div>
-        <button class="iconBtn" data-close aria-label="Close">✕</button>
-      </div>
-
-      <div class="modalBody">
-        <div class="callout">
-          Wire this button to your Stripe Payment Link or Checkout Session URL.
-        </div>
-        <div class="btnRow">
-          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Stripe Checkout →</a>
-          <button class="ghostBtn" data-close>Back</button>
-        </div>
-      </div>
+  <footer class="footer">
+    <div class="footerInner">
+      <span>Powered By Self Defi</span>
+      <span class="sep">•</span>
+      <span>Digital Infrastructure Architect</span>
     </div>
-  </div>
-
-  <div class="modal" id="modal-crypto" aria-hidden="true">
-    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Crypto Pay">
-      <div class="modalHead">
-        <div>
-          <div class="modalTitle">Crypto Pay</div>
-          <div class="modalSub">USDC / ETH via commerce invoice</div>
-        </div>
-        <button class="iconBtn" data-close aria-label="Close">✕</button>
-      </div>
-
-      <div class="modalBody">
-        <div class="callout">
-          Wire this button to Coinbase Commerce / thirdweb Pay / your invoice page.
-        </div>
-        <div class="btnRow">
-          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Crypto Checkout →</a>
-          <button class="ghostBtn" data-close>Back</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal-buy" aria-hidden="true">
-    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Buy Crypto">
-      <div class="modalHead">
-        <div>
-          <div class="modalTitle">Buy Crypto</div>
-          <div class="modalSub">Do this once, then send payment</div>
-        </div>
-        <button class="iconBtn" data-close aria-label="Close">✕</button>
-      </div>
-
-      <div class="modalBody">
-        <ol class="steps">
-          <li>Buy USDC (or ETH) using a trusted on-ramp.</li>
-          <li>Copy the payment address from your checkout/invoice.</li>
-          <li>Send funds on the correct network. Save the tx hash.</li>
-        </ol>
-
-        <div class="btnRow">
-          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Buy & Send Guide →</a>
-          <button class="ghostBtn" data-close>Back</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Simple modal controller (no frameworks)
-    const openers = document.querySelectorAll("[data-modal]");
-    const closers = document.querySelectorAll("[data-close]");
-    const modals  = document.querySelectorAll(".modal");
-
-    function openModal(id) {
-      const m = document.getElementById(id);
-      if (!m) return;
-      m.classList.add("show");
-      m.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modalOpen");
-    }
-
-    function closeModal(m) {
-      m.classList.remove("show");
-      m.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modalOpen");
-    }
-
-    openers.forEach(btn => {
-      btn.addEventListener("click", () => openModal(btn.dataset.modal));
-    });
-
-    closers.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const m = btn.closest(".modal");
-        if (m) closeModal(m);
-      });
-    });
-
-    modals.forEach(m => {
-      m.addEventListener("click", (e) => {
-        if (e.target === m) closeModal(m);
-      });
-    });
-
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        modals.forEach(m => m.classList.contains("show") && closeModal(m));
-      }
-    });
-  </script>
+  </footer>
 </body>
 </html>
