@@ -1,67 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wallet Connect — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="hasBg">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bgOverlay" aria-hidden="true"></div>
-
+<body class="page">
   <header class="topbar">
-    <a class="brand" href="./index.html">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-      <div class="brandText">
-        <div class="brandTitle">Vibe’n</div>
-        <div class="brandSub">Verify purchase and unlock.</div>
-      </div>
-    </a>
-
-    <nav class="navTabs">
-      <a class="tab tabActive" href="./access.html">Wallet Connect</a>
-      <a class="tab" href="./fiat.html">Fiat Payment</a>
-      <a class="tab" href="./crypto.html">Crypto Payment</a>
-      <a class="tab" href="./buy-crypto.html">Buy Crypto</a>
-    </nav>
+    <div class="topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+        <div class="brand__text">
+          <div class="brand__name">Vibe’n</div>
+          <div class="brand__tag">Wallet verification (gate).</div>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__pill" href="./index.html">Intro</a>
+        <a class="nav__pill is-active" href="./access.html">Wallet Connect</a>
+        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
+        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
+        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
+        <a class="nav__pill" href="./presentation.html">Presentation</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
-    <section class="heroCard">
-      <div class="heroCopy">
-        <h1>Wallet Connect</h1>
-        <p class="lede">This is your gate. Wire to WalletConnect / wagmi later.</p>
+    <section class="card hero">
+      <h1 class="hero__title">Connect wallet to unlock</h1>
+      <p class="hero__sub">This button is your gate. Wire to WalletConnect / wagmi later.</p>
+
+      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="nav__pill" href="#" onclick="alert('Hook WalletConnect here.'); return false;">Wallet Connect (Gate) →</a>
       </div>
 
-      <div class="ctaRow" style="grid-template-columns:1fr;">
-        <button class="cta ctaCrypto" type="button" onclick="alert('Placeholder: wire WalletConnect here.')">
-          <span class="ctaTitle">Connect Wallet</span>
-          <span class="ctaSub">Verify purchase → unlock content</span>
-        </button>
-      </div>
-
-      <div class="videoCard">
-        <div class="videoTop">
-          <div class="chip">GATED CONTENT</div>
-          <div class="chip chipGhost">Locked</div>
-        </div>
-        <div style="padding:14px 16px; color: rgba(255,255,255,.72); line-height:1.6;">
-          Placeholder container (hidden until verified).<br/>
-          Connect + verify to reveal course modules.
-        </div>
-        <div class="videoFoot">
-          <span><span class="dot"></span>After verify, reveal gated modules.</span>
-          <a class="miniLink" href="./index.html">Back to Landing →</a>
-        </div>
-      </div>
+      <p class="hero__sub" style="margin-top:16px;">
+        Once connected, you’ll validate purchase (token/NFT/allowlist/tx hash) then reveal content.
+      </p>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footerInner">
-      <span>Powered By Self Defi</span><span class="sep">•</span><span>Digital Infrastructure Architect</span>
-    </div>
+    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
   </footer>
 </body>
 </html>
