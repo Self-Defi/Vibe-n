@@ -1,219 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course with wallet verification." />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course with wallet verification." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- Background layer -->
+  <!-- Background image layer -->
   <div class="bg" aria-hidden="true"></div>
+  <div class="bgOverlay" aria-hidden="true"></div>
 
-  <!-- Top Nav -->
+  <!-- Top bar -->
   <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="#intro" aria-label="Vibe’n home">
-        <img class="brand__logo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">5-minute intro. Pay once. Unlock the gated course.</div>
-        </div>
-      </a>
-
-      <nav class="tabs" aria-label="Sections">
-        <a class="tab" href="#intro">Intro</a>
-        <a class="tab" href="#buysend">Buy &amp; Send</a>
-        <a class="tab" href="#pay">Payment Rails</a>
-        <a class="tab" href="#access">Access</a>
-      </nav>
+    <div class="brand">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+      <div class="brandText">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
+      </div>
     </div>
+
+    <nav class="nav">
+      <a class="navLink" href="./intro.html">Intro</a>
+      <a class="navLink" href="./buy-send.html">Buy &amp; Send</a>
+      <a class="navLink" href="./payments.html">Payment Rails</a>
+      <a class="navLink" href="./access.html">Access</a>
+    </nav>
   </header>
 
   <main class="wrap">
-    <!-- HERO -->
-    <section class="hero" id="intro">
-      <div class="hero__glass">
-        <h1 class="hero__title">Vibe’n</h1>
-        <p class="hero__sub">Build fast. Ship clean. Get paid. Unlock the gated course with wallet verification.</p>
+    <section class="hero">
+      <div class="heroInner">
+        <h1>Build fast. Ship clean. Get paid.</h1>
+        <p class="lede">
+          Unlock the gated course with wallet verification. Choose fiat or EVM crypto, then connect to validate.
+        </p>
 
-        <div class="pills">
-          <span class="pill">Urban / Neon</span>
-          <span class="pill">Wallet-gated</span>
-          <span class="pill">Fiat + EVM</span>
-          <span class="pill">No fluff</span>
+        <div class="chips">
+          <span class="chip">Urban / Neon</span>
+          <span class="chip">Wallet-gated</span>
+          <span class="chip">Fiat + EVM</span>
+          <span class="chip">No fluff</span>
         </div>
       </div>
     </section>
 
-    <!-- INTRO VIDEO CARD -->
-    <section class="card" aria-label="Intro video">
-      <div class="card__head">
-        <span class="kicker">INTRO VIDEO</span>
-        <span class="meta">≈ 5:00</span>
-      </div>
-
-      <div class="video">
-        <!-- Replace the src with your real intro video embed -->
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Intro video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-
-      <div class="card__foot">
-        <div class="dot"></div>
-        <div class="muted">No fluff. Proof build mindset.</div>
-        <a class="btn btn--ghost" href="#pay">Jump to payment rails →</a>
-      </div>
-    </section>
-
-    <!-- QUICK START -->
-    <section class="card" id="quick">
-      <div class="card__head">
-        <span class="kicker">QUICK START</span>
-      </div>
-
-      <h2 class="h2">Pay once → unlock forever</h2>
-      <p class="muted">Choose fiat or EVM crypto. Then verify access by wallet connect.</p>
-
-      <div class="steps">
-        <div class="step"><span class="step__num">1</span><span>Watch the intro</span></div>
-        <div class="step"><span class="step__num">2</span><span>Pick a payment rail</span></div>
-        <div class="step"><span class="step__num">3</span><span>Wallet connect to unlock</span></div>
-      </div>
-
-      <div class="actions">
-        <a class="btn btn--primary" href="#pay">Go to Payments →</a>
-        <a class="btn btn--secondary" href="#buysend">How to buy &amp; send →</a>
-      </div>
-    </section>
-
-    <!-- BUY & SEND -->
-    <section class="card" id="buysend">
-      <div class="card__head">
-        <span class="kicker">BUY &amp; SEND STEP-BY-STEP</span>
-      </div>
-
-      <div class="grid">
-        <div class="panel">
-          <h3 class="h3">Option A — Coinbase (Simple)</h3>
-          <ol class="list">
-            <li>Buy <b>USDC</b> (recommended) or <b>ETH</b> (if required).</li>
-            <li>Tap <b>Send</b> → paste the payment address.</li>
-            <li>Select the correct network (Base / Ethereum / Polygon).</li>
-            <li>Confirm → keep the tx hash for proof.</li>
-          </ol>
-          <p class="warn">Rule: network must match the invoice network.</p>
+    <!-- Tiles -->
+    <section class="tiles" aria-label="Choose a section">
+      <a class="tile tileIntro" href="./intro.html">
+        <div class="tileTop">
+          <div class="tileKicker">INTRO</div>
+          <div class="tileBadge">≈ 5:00</div>
         </div>
+        <div class="tileTitle">Watch the intro</div>
+        <div class="tileDesc">Get the vibe + what you’ll unlock.</div>
+        <div class="tileCta">Open →</div>
+      </a>
 
-        <div class="panel">
-          <h3 class="h3">Option B — MetaMask (EVM)</h3>
-          <ol class="list">
-            <li>Get ETH for gas + USDC for payment.</li>
-            <li>Open MetaMask → <b>Send</b>.</li>
-            <li>Paste address → set amount → confirm.</li>
-            <li>Save tx hash, then wallet-connect to unlock.</li>
-          </ol>
-          <p class="warn">If you mess up the network, funds can be stuck. Slow down here.</p>
+      <a class="tile tileBuy" href="./buy-send.html">
+        <div class="tileTop">
+          <div class="tileKicker">BUY &amp; SEND</div>
+          <div class="tileBadge">Step-by-step</div>
         </div>
-      </div>
-    </section>
+        <div class="tileTitle">Buy crypto + send payment</div>
+        <div class="tileDesc">Do this once. Keep the tx hash.</div>
+        <div class="tileCta">Open →</div>
+      </a>
 
-    <!-- PAYMENT RAILS -->
-    <section class="card" id="pay">
-      <div class="card__head">
-        <span class="kicker">PAYMENT RAILS</span>
-        <span class="meta">Choose one</span>
-      </div>
-
-      <div class="rails">
-        <!-- Replace href with your real checkout links -->
-        <a class="rail" href="#" target="_blank" rel="noopener">
-          <div class="rail__title">Card / Apple Pay <span class="rail__sub">(Stripe)</span></div>
-          <div class="rail__desc">Fastest checkout</div>
-          <div class="rail__go">→</div>
-        </a>
-
-        <a class="rail" href="#" target="_blank" rel="noopener">
-          <div class="rail__title">Crypto <span class="rail__sub">(Coinbase Commerce)</span></div>
-          <div class="rail__desc">USDC / ETH / more</div>
-          <div class="rail__go">→</div>
-        </a>
-
-        <a class="rail" href="#" target="_blank" rel="noopener">
-          <div class="rail__title">Bitcoin <span class="rail__sub">(BTCPay)</span></div>
-          <div class="rail__desc">Direct BTC payments</div>
-          <div class="rail__go">→</div>
-        </a>
-      </div>
-
-      <div class="already">
-        <div class="already__q">Already paid?</div>
-        <div class="muted">If you’re gating by code/token/tx hash, go to Access.</div>
-        <a class="btn btn--primary" href="#access">Access Gated Content →</a>
-      </div>
-    </section>
-
-    <!-- ACCESS -->
-    <section class="card" id="access">
-      <div class="card__head">
-        <span class="kicker">ACCESS</span>
-        <span class="meta">Wallet verification</span>
-      </div>
-
-      <h2 class="h2">Connect wallet</h2>
-      <p class="muted">This button is your gate. Wire it to WalletConnect / wagmi later.</p>
-
-      <button class="btn btn--primary" id="connectBtn" type="button">
-        Wallet Connect (Gate) →
-      </button>
-
-      <div class="gate">
-        <div class="gate__lock">🔒</div>
-        <div>
-          <div class="gate__title">Gated content</div>
-          <div class="muted">Placeholder container (hidden until verified).</div>
+      <a class="tile tilePay" href="./payments.html">
+        <div class="tileTop">
+          <div class="tileKicker">PAYMENT RAILS</div>
+          <div class="tileBadge">Fiat / EVM / BTC</div>
         </div>
-      </div>
+        <div class="tileTitle">Choose a payment rail</div>
+        <div class="tileDesc">Card / Apple Pay, Coinbase Commerce, BTC.</div>
+        <div class="tileCta">Open →</div>
+      </a>
 
-      <div class="gated" id="gatedContent" hidden>
-        <div class="gated__head">✅ Unlocked</div>
-        <div class="muted">Drop your course modules here (links, embeds, or internal pages).</div>
-      </div>
+      <a class="tile tileAccess" href="./access.html">
+        <div class="tileTop">
+          <div class="tileKicker">ACCESS</div>
+          <div class="tileBadge">Wallet Connect</div>
+        </div>
+        <div class="tileTitle">Connect wallet to unlock</div>
+        <div class="tileDesc">Verify purchase, then reveal content.</div>
+        <div class="tileCta">Open →</div>
+      </a>
     </section>
 
     <footer class="footer">
-      <div>Vibe’n — Urban build mindset</div>
-      <div class="muted">Wallet gated · Fiat + EVM rails</div>
+      <div class="footerLeft">Vibe’n — Urban build mindset</div>
+      <div class="footerRight">Wallet gated · Fiat + EVM rails</div>
     </footer>
   </main>
 
   <script>
-    // Background: lock to your new room background (ALL CAPS .PNG)
-    // If you ever swap, do it here only.
-    document.documentElement.style.setProperty('--bg-url', "url('assets/bg-room.PNG')");
-
-    // Demo gate behavior (replace with real wallet connect + verification later)
-    const btn = document.getElementById('connectBtn');
-    const gated = document.getElementById('gatedContent');
-
-    btn.addEventListener('click', () => {
-      const unlocked = gated.hasAttribute('hidden');
-      if (unlocked) {
-        gated.removeAttribute('hidden');
-        btn.textContent = 'Wallet Connected ✓';
-        btn.classList.add('btn--ok');
-      } else {
-        gated.setAttribute('hidden', '');
-        btn.textContent = 'Wallet Connect (Gate) →';
-        btn.classList.remove('btn--ok');
-      }
-    });
+    // Default background (room). Change BG per page by setting: data-bg="bg-viben-01.PNG" etc.
+    const bg = document.querySelector('.bg');
+    const pageBg = document.body.getAttribute('data-bg') || 'bg-room.PNG';
+    bg.style.backgroundImage = `url("./assets/${pageBg}")`;
   </script>
 </body>
 </html>
