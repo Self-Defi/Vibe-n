@@ -1,90 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
   <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background layers are handled in CSS (body::before and body::after) -->
+  <!-- True page background lives in CSS (body::before). Not in the video block. -->
 
   <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n home">
-        <img class="brand__logo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
-        <div class="brand__text">
-          <div class="brand__title">Vibe’n</div>
-          <div class="brand__sub">5-minute intro. Pay once. Unlock the gated course.</div>
-        </div>
-      </a>
-
-      <nav class="nav">
-        <a class="nav__pill" href="access.html">Wallet Connect</a>
-        <a class="nav__pill" href="fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="presentation.html">Presentation</a>
-      </nav>
+    <div class="brand">
+      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
+      <div class="brandText">
+        <div class="brandTitle">Vibe’n</div>
+        <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
+      </div>
     </div>
+
+    <nav class="navPills" aria-label="Primary">
+      <a class="pill" href="access.html">Wallet Connect</a>
+      <a class="pill" href="fiat.html">Fiat Payment</a>
+      <a class="pill" href="crypto.html">Crypto Payment</a>
+      <a class="pill" href="buy-crypto.html">Buy Crypto</a>
+      <a class="pill" href="vc-thought-becomes-infrastructure.pdf">Presentation</a>
+    </nav>
   </header>
 
   <main class="wrap">
-    <section class="hero card">
-      <div class="hero__copy">
-        <h1>Build fast. Ship clean. Get paid.</h1>
-        <p class="hero__sub">
-          Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
-        </p>
-      </div>
+    <section class="heroCard">
+      <h1 class="heroTitle">Build fast. Ship clean. Get paid.</h1>
+      <p class="heroCopy">
+        Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
+      </p>
 
-      <!-- VIDEO (under headline) -->
-      <section class="video card card--inner" aria-label="Intro video">
-        <div class="video__top">
+      <div class="videoCard" role="group" aria-label="Intro video">
+        <div class="videoHead">
           <div class="chip">INTRO VIDEO</div>
-          <div class="chip chip--muted">≈ 5:00</div>
+          <div class="chip chipRight">≈ 5:00</div>
         </div>
 
-        <!-- OPTION A: Local MP4 (recommended for “embed the file”)
-             Put your file at: assets/intro.mp4  (or rename below to match exactly)
-        -->
-        <div class="video__frame">
-          <video
-            class="video__player"
-            controls
-            playsinline
-            preload="metadata"
-            poster="assets/bg-room.PNG"
-          >
-            <source src="assets/intro.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- OPTION B: YouTube embed (if you don’t have the MP4 yet)
-        <div class="video__frame">
+        <!-- OPTION A (recommended): YouTube/Vimeo embed -->
+        <div class="videoFrame">
           <iframe
-            class="video__embed"
-            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
-            title="Intro video"
-            frameborder="0"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vibe’n Intro Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>
         </div>
-        -->
-      </section>
-    </section>
 
-    <footer class="footer">
-      <div class="footer__inner">
-        <span>Powered By Self Defi</span>
-        <span class="dot">•</span>
-        <span>Digital Infrastructure Architect</span>
+        <!-- OPTION B (local file): put a video in /assets and use this instead.
+             IMPORTANT: GitHub Pages is CASE-SENSITIVE. Match the filename exactly.
+             Example: assets/intro-video.MP4  (or .mp4 — your choice, just match the case)
+        <div class="videoFrame">
+          <video controls playsinline preload="metadata">
+            <source src="assets/intro-video.MP4" type="video/mp4" />
+            Sorry—your browser can’t play this video.
+          </video>
+        </div>
+        -->
+
+        <div class="videoFoot">
+          <div class="dot"></div>
+          <div class="muted">No fluff. Proof build mindset.</div>
+          <a class="miniLink" href="fiat.html">Go to payments →</a>
+        </div>
       </div>
-    </footer>
+    </section>
   </main>
+
+  <footer class="footer">
+    Powered By Self Defi &nbsp;·&nbsp; Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
