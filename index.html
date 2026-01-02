@@ -1,153 +1,519 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vibe’n — Vibe Coding Course</title>
-  <meta name="description" content="Vibe’n — a 5-minute intro to the Vibe Coding Course. Pay to unlock gated content." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Graffiti-ish display font + clean UI font -->
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vibe’n — Course Access</title>
+  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <div class="bg">
-    <div class="bgGlow"></div>
-    <div class="noise"></div>
-  </div>
+  <!-- BACKGROUND (swap the image file name below to any of your generated backgrounds) -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="windowDots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="brand">
+        <div class="brand__title">Vibe’n</div>
+        <div class="brand__sub">5-minute intro. Pay once. Unlock the gated course.</div>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <div class="pillRow">
+        <span class="pill">Urban-build mindset</span>
+        <span class="pill">EVM-ready</span>
+        <span class="pill">Wallet-gated access</span>
+      </div>
+
+      <button class="btn btn--ghost" id="btnJumpPayment" type="button">
+        Jump to payment rails →
+      </button>
+    </div>
+  </header>
 
   <main class="wrap">
-    <!-- HERO -->
-    <section class="hero" aria-label="Vibe’n hero">
-      <div class="sprayTop"></div>
+    <section class="panel">
+      <div class="panel__header">
+        <div class="panel__headerLeft">
+          <span class="tag">INTRO VIDEO</span>
+          <span class="meta">≈ 5:00</span>
+        </div>
 
-      <div class="heroInner">
-        <header class="brand">
-          <div class="badge" aria-hidden="true">
+        <div class="panel__headerRight">
+          <span class="statusDot" id="accessDot" aria-hidden="true"></span>
+          <span class="statusText" id="accessText">Access: Locked</span>
+        </div>
+      </div>
+
+      <div class="panel__body">
+        <div class="videoShell">
+          <!-- Replace VIDEO_ID with your intro video -->
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+            title="Intro video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="panel__footer">
+          <div class="bullet">
             <span class="dot"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
+            <span>No fluff. Proof-build mindset.</span>
           </div>
 
-          <h1 class="logoText">
-            <span class="logoWord">Vibe’n</span>
-          </h1>
+          <div class="ctaRow">
+            <button class="btn btn--primary" id="btnOpenTabs" type="button">
+              Open steps + checkout →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p class="tagline">
-            5-minute intro. Pay once. Unlock the gated course.
-          </p>
-        </header>
+    <section class="grid2">
+      <section class="panel" id="panelTabs">
+        <div class="panel__header">
+          <div class="panel__headerLeft">
+            <span class="tag">ONBOARDING</span>
+            <span class="meta">Step-by-step</span>
+          </div>
+          <div class="panel__headerRight">
+            <span class="hint">Everything you need, in one page.</span>
+          </div>
+        </div>
 
-        <!-- VIDEO -->
-        <section class="videoCard" aria-label="Intro video">
-          <div class="videoTop">
-            <span class="pill">INTRO VIDEO</span>
-            <span class="hint">≈ 5:00</span>
+        <div class="panel__body">
+          <div class="tabs" role="tablist" aria-label="Vibe’n sections">
+            <button class="tab isActive" role="tab" aria-selected="true" aria-controls="tabSteps" id="tSteps">Buy & Send Crypto</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabPay" id="tPay">Payment Rails</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabAccess" id="tAccess">Access Gate</button>
           </div>
 
-          <div class="videoFrame">
-            <!-- Replace this iframe with your final video embed -->
-            <!-- YouTube example: https://www.youtube.com/embed/VIDEO_ID -->
-            <!-- Vimeo example: https://player.vimeo.com/video/VIDEO_ID -->
-            <!-- IPFS: you can use an <video> tag instead; see comment below -->
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Vibe’n Intro"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+          <!-- STEPS -->
+          <div class="tabPanel isActive" role="tabpanel" id="tabSteps" aria-labelledby="tSteps">
+            <div class="steps">
+              <div class="step">
+                <div class="step__num">1</div>
+                <div class="step__content">
+                  <div class="step__title">Buy crypto (fiat → USDC)</div>
+                  <div class="step__text">
+                    Use a trusted on-ramp (exchange, wallet on-ramp, or card checkout). Aim for <b>USDC on an EVM chain</b>
+                    (Base / Polygon / Arbitrum / Ethereum).
+                  </div>
+                  <div class="chips">
+                    <span class="chip">USDC</span>
+                    <span class="chip">Base</span>
+                    <span class="chip">Polygon</span>
+                    <span class="chip">Arbitrum</span>
+                    <span class="chip">Ethereum</span>
+                  </div>
+                </div>
+              </div>
 
-            <!-- IPFS/MP4 alternative:
-            <video controls playsinline>
-              <source src="https://ipfs.io/ipfs/YOUR_CID" type="video/mp4" />
-            </video>
-            -->
-          </div>
+              <div class="step">
+                <div class="step__num">2</div>
+                <div class="step__content">
+                  <div class="step__title">Verify network + address</div>
+                  <div class="step__text">
+                    Copy the checkout address exactly. Confirm the <b>network matches</b> (don’t send ETH-mainnet assets to a Polygon address).
+                  </div>
+                </div>
+              </div>
 
-          <div class="videoBottom">
-            <div class="micro">
-              <span class="spark"></span>
-              No fluff. Proof build mindset.
+              <div class="step">
+                <div class="step__num">3</div>
+                <div class="step__content">
+                  <div class="step__title">Send payment</div>
+                  <div class="step__text">
+                    Send the exact amount shown in checkout. Wait for confirmations. Save your <b>tx hash</b>.
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step__num">4</div>
+                <div class="step__content">
+                  <div class="step__title">Unlock content (wallet connect)</div>
+                  <div class="step__text">
+                    Connect the same wallet you used to pay (or paste your receipt token). Access flips to <b>Unlocked</b>.
+                  </div>
+                </div>
+              </div>
             </div>
-            <a class="link" href="#pay">Jump to payment rails →</a>
-          </div>
-        </section>
 
-        <!-- PAYMENT RAILS -->
-        <section id="pay" class="payCard" aria-label="Payment rails">
-          <div class="payTop">
-            <span class="pill">PAYMENT RAILS</span>
-            <span class="hint">Choose one</span>
+            <div class="notice">
+              <div class="notice__icon">⚠️</div>
+              <div class="notice__text">
+                Security rule: <b>Network mismatch = funds gone.</b> Double-check chain + address before sending.
+              </div>
+            </div>
           </div>
 
-          <div class="payGrid">
-            <!-- Option 1 -->
-            <a class="payBtn" href="https://YOUR-STRIPE-LINK" target="_blank" rel="noreferrer">
-              <div class="payIcon" aria-hidden="true">💳</div>
-              <div class="payText">
-                <div class="payTitle">Card / Apple Pay (Stripe)</div>
-                <div class="paySub">Fastest checkout</div>
-              </div>
-              <div class="chev" aria-hidden="true">→</div>
-            </a>
+          <!-- PAYMENTS -->
+          <div class="tabPanel" role="tabpanel" id="tabPay" aria-labelledby="tPay">
+            <div class="payGrid" id="paymentRails">
+              <div class="payCard">
+                <div class="payCard__top">
+                  <div class="payCard__title">Card / Apple Pay (Stripe)</div>
+                  <div class="payCard__sub">Fastest checkout</div>
+                </div>
 
-            <!-- Option 2 -->
-            <a class="payBtn" href="https://YOUR-COINBASE-COMMERCE-LINK" target="_blank" rel="noreferrer">
-              <div class="payIcon" aria-hidden="true">⛓️</div>
-              <div class="payText">
-                <div class="payTitle">Crypto (Coinbase Commerce)</div>
-                <div class="paySub">USDC / ETH / more</div>
-              </div>
-              <div class="chev" aria-hidden="true">→</div>
-            </a>
+                <div class="payCard__meta">
+                  <span class="badge">Fiat</span>
+                  <span class="badge">Instant</span>
+                </div>
 
-            <!-- Option 3 -->
-            <a class="payBtn" href="https://YOUR-BTCPAY-INVOICE-OR-STORE" target="_blank" rel="noreferrer">
-              <div class="payIcon" aria-hidden="true">₿</div>
-              <div class="payText">
-                <div class="payTitle">Bitcoin (BTCPay)</div>
-                <div class="paySub">Direct BTC payments</div>
+                <button class="btn btn--rail" type="button" data-action="stripe">
+                  Open Stripe Checkout →
+                </button>
               </div>
-              <div class="chev" aria-hidden="true">→</div>
-            </a>
+
+              <div class="payCard">
+                <div class="payCard__top">
+                  <div class="payCard__title">Crypto (Coinbase Commerce)</div>
+                  <div class="payCard__sub">USDC / ETH + more</div>
+                </div>
+
+                <div class="payCard__meta">
+                  <span class="badge">EVM</span>
+                  <span class="badge">On-chain</span>
+                </div>
+
+                <button class="btn btn--rail" type="button" data-action="commerce">
+                  Open Crypto Checkout →
+                </button>
+              </div>
+
+              <div class="payCard">
+                <div class="payCard__top">
+                  <div class="payCard__title">Bitcoin (BTCPay)</div>
+                  <div class="payCard__sub">Direct BTC payments</div>
+                </div>
+
+                <div class="payCard__meta">
+                  <span class="badge">BTC</span>
+                  <span class="badge">Non-custodial</span>
+                </div>
+
+                <button class="btn btn--rail" type="button" data-action="btcpay">
+                  Open BTC Invoice →
+                </button>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="receipt">
+              <div class="receipt__left">
+                <div class="receipt__title">Already paid?</div>
+                <div class="receipt__text">
+                  Paste a receipt token (or tx hash) if you’re gating access by code/token.
+                </div>
+              </div>
+
+              <div class="receipt__right">
+                <input class="input" id="receiptInput" placeholder="Paste receipt token or tx hash…" />
+                <button class="btn btn--primary" id="btnApplyReceipt" type="button">Apply</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCESS -->
+          <div class="tabPanel" role="tabpanel" id="tabAccess" aria-labelledby="tAccess">
+            <div class="accessBlock">
+              <div class="accessBlock__left">
+                <div class="accessTitle">Access Gated Content</div>
+                <div class="accessSub">
+                  Wallet connect is the verification layer. If you paid with crypto, connect the same wallet.
+                </div>
+
+                <div class="miniRow">
+                  <span class="miniLink">View on Explorer →</span>
+                  <span class="miniSep">•</span>
+                  <span class="miniMuted">Executed – Finalized on-chain</span>
+                </div>
+              </div>
+
+              <div class="accessBlock__right">
+                <button class="btn btn--primary" id="btnWalletConnect" type="button">
+                  Connect Wallet
+                </button>
+                <button class="btn btn--ghost" id="btnAccess" type="button">
+                  Open Gated Course →
+                </button>
+              </div>
+            </div>
+
+            <div class="gatePanel" id="gatePanel">
+              <div class="gatePanel__top">
+                <div class="gateLabel">GATED CONTENT</div>
+                <div class="gateState" id="gateState">Locked</div>
+              </div>
+
+              <div class="gatePanel__body">
+                <p class="gateText">
+                  This area is intentionally locked until purchase + verification is confirmed.
+                </p>
+
+                <div class="codeBox">
+                  <div class="codeBox__title">Your session</div>
+                  <div class="codeBox__row">
+                    <span class="k">Wallet</span>
+                    <span class="v" id="walletDisplay">Not connected</span>
+                  </div>
+                  <div class="codeBox__row">
+                    <span class="k">Receipt</span>
+                    <span class="v" id="receiptDisplay">None</span>
+                  </div>
+                </div>
+
+                <div class="gateActions">
+                  <button class="btn btn--ghost" id="btnReset" type="button">Reset demo state</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="tiny">
+              Note: This page includes <b>demo gating logic</b> (localStorage) so the UI works on GitHub Pages.
+              For real gating, verify payment server-side or via on-chain reads + signatures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel panel--side">
+        <div class="panel__header">
+          <div class="panel__headerLeft">
+            <span class="tag">STATUS</span>
+            <span class="meta">Live indicators</span>
+          </div>
+        </div>
+
+        <div class="panel__body">
+          <div class="statGrid">
+            <div class="stat">
+              <div class="stat__k">Network</div>
+              <div class="stat__v">ETH • Mainnet</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Checkout</div>
+              <div class="stat__v">Ready</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Gate</div>
+              <div class="stat__v" id="gateMini">Locked</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Session</div>
+              <div class="stat__v" id="sessionMini">Idle</div>
+            </div>
           </div>
 
           <div class="divider"></div>
 
-          <!-- ACCESS CTA (destination is your gated content) -->
-          <div class="accessRow">
-            <div class="accessText">
-              <div class="accessTitle">Already paid?</div>
-              <div class="accessSub">
-                Hit access. If you’re gating by code/token, send them to your gate page here.
-              </div>
+          <div class="sideCard">
+            <div class="sideCard__title">Drop-in background</div>
+            <div class="sideCard__text">
+              Put your image here:
+              <code>assets/bg-viben-01.png</code>
+              and the CSS auto-picks it.
             </div>
-            <a class="accessBtn" href="https://YOUR-GATED-CONTENT-LINK" target="_blank" rel="noreferrer">
-              Access Gated Content
-              <span class="glowArrow" aria-hidden="true">→</span>
-            </a>
+            <button class="btn btn--ghost" id="btnCycleBg" type="button">Cycle background</button>
           </div>
-
-          <p class="fineprint">
-            Note: This page is intentionally minimal. Payments open in a new tab; gating happens on your access page.
-          </p>
-        </section>
-      </div>
-
-      <div class="sprayBottom"></div>
+        </div>
+      </aside>
     </section>
 
-    <footer class="footer">
-      <span class="footerLine"></span>
-      <span class="footerText">© <span id="year"></span> Vibe’n</span>
+    <footer class="foot">
+      <div class="foot__left">
+        <span class="footDot"></span>
+        <span>Vibe’n</span>
+        <span class="footSep">•</span>
+        <span class="muted">Pay once. Unlock the gated course.</span>
+      </div>
+      <div class="foot__right">
+        <span class="muted">Powered by Self-Defi</span>
+      </div>
     </footer>
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // -----------------------------
+    // QUICK DEMO STATE (GitHub Pages friendly)
+    // Replace with real payment verification + wallet gating.
+    // -----------------------------
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+    const STORAGE = {
+      wallet: "viben_wallet",
+      receipt: "viben_receipt",
+      paid: "viben_paid"
+    };
+
+    const bgList = [
+      "assets/bg-viben-01.png",
+      "assets/bg-viben-02.png",
+      "assets/bg-viben-03.png"
+    ];
+
+    const state = {
+      bgIndex: 0,
+      wallet: localStorage.getItem(STORAGE.wallet) || "",
+      receipt: localStorage.getItem(STORAGE.receipt) || "",
+      paid: localStorage.getItem(STORAGE.paid) === "true"
+    };
+
+    function mask(addr) {
+      if (!addr) return "Not connected";
+      if (addr.length < 12) return addr;
+      return addr.slice(0, 6) + "…" + addr.slice(-4);
+    }
+
+    function setBg(idx) {
+      state.bgIndex = (idx + bgList.length) % bgList.length;
+      document.documentElement.style.setProperty("--bgImage", `url('${bgList[state.bgIndex]}')`);
+    }
+
+    function setPaid(v) {
+      state.paid = !!v;
+      localStorage.setItem(STORAGE.paid, String(state.paid));
+      render();
+    }
+
+    function setWallet(w) {
+      state.wallet = w || "";
+      localStorage.setItem(STORAGE.wallet, state.wallet);
+      render();
+    }
+
+    function setReceipt(r) {
+      state.receipt = r || "";
+      localStorage.setItem(STORAGE.receipt, state.receipt);
+      render();
+    }
+
+    function render() {
+      $("#walletDisplay").textContent = mask(state.wallet);
+      $("#receiptDisplay").textContent = state.receipt ? (state.receipt.slice(0, 10) + "…") : "None";
+
+      const unlocked = state.paid && !!state.wallet;
+      $("#gateState").textContent = unlocked ? "Unlocked" : "Locked";
+      $("#gateMini").textContent = unlocked ? "Unlocked" : "Locked";
+      $("#sessionMini").textContent = state.wallet ? "Wallet connected" : "Idle";
+
+      $("#accessText").textContent = unlocked ? "Access: Unlocked" : "Access: Locked";
+      $("#accessDot").classList.toggle("isOk", unlocked);
+
+      $("#btnAccess").disabled = !unlocked;
+      $("#btnAccess").classList.toggle("isDisabled", !unlocked);
+
+      // Small glow increase when unlocked
+      document.body.classList.toggle("isUnlocked", unlocked);
+    }
+
+    // Tabs
+    const tabButtons = $$(".tab");
+    const panels = $$(".tabPanel");
+
+    function openTab(btn) {
+      tabButtons.forEach(b => {
+        const isActive = b === btn;
+        b.classList.toggle("isActive", isActive);
+        b.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      panels.forEach(p => p.classList.remove("isActive"));
+      const targetId = btn.getAttribute("aria-controls");
+      $("#" + targetId).classList.add("isActive");
+    }
+
+    tabButtons.forEach(btn => btn.addEventListener("click", () => openTab(btn)));
+
+    // Buttons
+    $("#btnJumpPayment").addEventListener("click", () => {
+      openTab($("#tPay"));
+      $("#paymentRails").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    $("#btnOpenTabs").addEventListener("click", () => {
+      $("#panelTabs").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    $("#btnCycleBg").addEventListener("click", () => setBg(state.bgIndex + 1));
+
+    // Payment rail buttons (wire these to your real links)
+    $$(".btn--rail").forEach(b => {
+      b.addEventListener("click", () => {
+        const action = b.getAttribute("data-action");
+        // TODO: Replace these placeholders with your real checkout URLs
+        const urls = {
+          stripe: "#",
+          commerce: "#",
+          btcpay: "#"
+        };
+
+        // For demo: treat "opening checkout" as "paid" so the gate UI is testable.
+        setPaid(true);
+
+        if (urls[action] && urls[action] !== "#") {
+          window.open(urls[action], "_blank", "noopener,noreferrer");
+        } else {
+          alert("Hook your real checkout URL in index.html → urls{}");
+        }
+      });
+    });
+
+    $("#btnApplyReceipt").addEventListener("click", () => {
+      const val = $("#receiptInput").value.trim();
+      if (!val) return;
+      setReceipt(val);
+      // Demo: applying receipt marks paid
+      setPaid(true);
+      $("#receiptInput").value = "";
+      openTab($("#tAccess"));
+    });
+
+    // Wallet connect (demo)
+    $("#btnWalletConnect").addEventListener("click", async () => {
+      // REAL: integrate wagmi + WalletConnect / Coinbase Wallet / MetaMask.
+      // DEMO: fake an address to let you test UI on GitHub Pages.
+      const fake = "0x" + Math.random().toString(16).slice(2).padEnd(40, "0").slice(0, 40);
+      setWallet(fake);
+      openTab($("#tAccess"));
+    });
+
+    $("#btnAccess").addEventListener("click", () => {
+      // TODO: route to your gated page / content dashboard
+      alert("Gate passed. Route to your purchased content here.");
+    });
+
+    $("#btnReset").addEventListener("click", () => {
+      localStorage.removeItem(STORAGE.wallet);
+      localStorage.removeItem(STORAGE.receipt);
+      localStorage.removeItem(STORAGE.paid);
+      state.wallet = "";
+      state.receipt = "";
+      state.paid = false;
+      render();
+    });
+
+    // Init
+    setBg(0); // default bg-viben-01.png
+    render();
   </script>
 </body>
 </html>
+
