@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vibe’n — Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-bg="bg-room.PNG">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bgOverlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+      <div class="brandText">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandSub">Wallet verification</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="navLink" href="./index.html">Home</a>
+      <a class="navLink" href="./intro.html">Intro</a>
+      <a class="navLink" href="./buy-send.html">Buy &amp; Send</a>
+      <a class="navLink" href="./payments.html">Payment Rails</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="page">
+      <div class="pageHeader">
+        <div class="pageTitle">Access — Connect wallet to unlock</div>
+        <div class="backRow">
+          <a class="btn" href="./index.html">← Back</a>
+        </div>
+      </div>
+
+      <div class="pageBody">
+        <div class="card">
+          <h3>Connect wallet</h3>
+          <p>
+            This button is your gate. Wire it to WalletConnect / wagmi later.
+            After connection, validate purchase (token/NFT/allowlist/tx hash) then reveal content.
+          </p>
+          <button class="btn" type="button" onclick="mockConnect()">Wallet Connect (Gate) →</button>
+        </div>
+
+        <div class="card" id="gated" style="display:none;">
+          <h3>Gated content</h3>
+          <p>Unlocked (mock). Replace with your real gated modules page or embedded content.</p>
+          <div class="hr"></div>
+          <p><b>Module 1:</b> Setup</p>
+          <p><b>Module 2:</b> Payments</p>
+          <p><b>Module 3:</b> Shipping</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerLeft">Vibe’n — Urban build mindset</div>
+      <div class="footerRight">Access</div>
+    </footer>
+  </main>
+
+  <script>
+    const bg = document.querySelector('.bg');
+    const pageBg = document.body.getAttribute('data-bg') || 'bg-room.PNG';
+    bg.style.backgroundImage = `url("./assets/${pageBg}")`;
+
+    function mockConnect(){
+      // placeholder: simulate unlock so you can test the UI now
+      document.getElementById('gated').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('gated').offsetTop - 90, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
