@@ -1,63 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vibe’n — Presentation</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Presentation — Vibe’n</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
+<body class="page">
   <header class="topbar">
     <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n home">
-        <img class="brand__logo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
+      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
         <div class="brand__text">
-          <div class="brand__title">Vibe’n</div>
-          <div class="brand__sub">Presentation</div>
+          <div class="brand__name">Vibe’n</div>
+          <div class="brand__tag">Course intro deck.</div>
         </div>
       </a>
-
-      <nav class="nav">
-        <a class="nav__pill" href="access.html">Wallet Connect</a>
-        <a class="nav__pill" href="fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="presentation.html">Presentation</a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__pill" href="./index.html">Intro</a>
+        <a class="nav__pill" href="./access.html">Wallet Connect</a>
+        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
+        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
+        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
+        <a class="nav__pill is-active" href="./presentation.html">Presentation</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="card" style="padding:18px;">
-      <h1 style="margin:0 0 10px;">Presentation</h1>
-      <p style="margin:0 0 14px; color:rgba(255,255,255,.72);">
-        Open or view the deck below.
-      </p>
+    <section class="card hero">
+      <h1 class="hero__title">Presentation</h1>
+      <p class="hero__sub">Inline PDF viewer + direct download link.</p>
 
-      <!-- Put your PDF in repo root with this exact name,
-           OR change the src/href to match where you place it. -->
-      <div class="video__frame" style="aspect-ratio:auto;">
+      <!-- Put the PDF in repo root OR /assets. Choose ONE and match the href/src. -->
+      <div class="card" style="margin-top:14px; overflow:hidden; background:rgba(10,14,28,.35); border:1px solid rgba(255,255,255,.10);">
         <iframe
-          src="vc-thought-becomes-infrastructure.pdf"
-          style="width:100%; height:78vh; border:0; display:block;"
-          title="Presentation PDF"
+          title="Vibe Coding Presentation"
+          src="./vc-thought-becomes-infrastructure.pdf"
+          style="width:100%; height:72vh; border:0;"
         ></iframe>
       </div>
 
       <div style="margin-top:12px;">
-        <a class="nav__pill" href="vc-thought-becomes-infrastructure.pdf" target="_blank" rel="noopener">
-          Open PDF in new tab →
-        </a>
+        <a class="nav__pill" href="./vc-thought-becomes-infrastructure.pdf">Open / Download PDF →</a>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <span>Powered By Self Defi</span>
-        <span class="dot">•</span>
-        <span>Digital Infrastructure Architect</span>
-      </div>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
+  </footer>
 </body>
 </html>
+
