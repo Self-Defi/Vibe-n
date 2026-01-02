@@ -1,13 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course with wallet verification." />
-
-  <!-- IMPORTANT: relative path for GitHub Pages project site -->
-  <link rel="stylesheet" href="./styles.css?v=1.0.0" />
+  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course with wallet verification." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -16,263 +14,259 @@
   <div class="bgOverlay" aria-hidden="true"></div>
 
   <header class="topbar">
-    <div class="brand">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
-      <div class="brandText">
-        <div class="brandTitle">Vibe’n</div>
-        <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
-      </div>
-    </div>
-
-    <nav class="navPills" aria-label="Sections">
-      <button class="pill isActive" data-tab="intro">Intro</button>
-      <button class="pill" data-tab="buy">Buy &amp; Send</button>
-      <button class="pill" data-tab="pay">Payment Rails</button>
-      <button class="pill" data-tab="access">Access</button>
-    </nav>
-  </header>
-
-  <main class="shell">
-    <section class="hero">
-      <div class="heroLeft">
-        <h1>Vibe’n</h1>
-        <p class="lead">Build fast. Ship clean. Get paid. Unlock the gated course with wallet verification.</p>
-        <div class="tagRow">
-          <span class="tag">Urban / Neon</span>
-          <span class="tag">Wallet-gated</span>
-          <span class="tag">Fiat + EVM</span>
-          <span class="tag">No fluff</span>
+    <div class="topbarInner">
+      <div class="brand">
+        <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
+        <div class="brandText">
+          <div class="brandName">Vibe’n</div>
+          <div class="brandTagline">5-minute intro. Pay once. Unlock the gated course.</div>
         </div>
       </div>
 
-      <div class="heroRight">
-        <div class="quickCard">
-          <div class="cardKicker">QUICK START</div>
-          <div class="cardTitle">Pay once → unlock forever</div>
-          <div class="cardText">Choose fiat or EVM crypto. Then verify access by wallet connect.</div>
+      <nav class="nav">
+        <a class="navLink" href="#intro">Intro</a>
+        <a class="navLink" href="#buy">Buy &amp; Send</a>
+        <a class="navLink" href="#pay">Payment Rails</a>
+        <a class="navLink navCta" href="#access">Access</a>
+      </nav>
+    </div>
+  </header>
 
-          <div class="steps">
-            <div class="step"><span class="stepNum">1</span><span>Watch the intro</span></div>
-            <div class="step"><span class="stepNum">2</span><span>Pick a payment rail</span></div>
-            <div class="step"><span class="stepNum">3</span><span>Wallet connect to unlock</span></div>
-          </div>
+  <main class="wrap">
+    <!-- HERO (kept quiet so bg can breathe) -->
+    <section class="hero">
+      <div class="heroInner">
+        <h1 class="heroTitle">Build fast. Ship clean. Get paid.</h1>
+        <p class="heroSub">
+          Unlock the gated course with <strong>wallet verification</strong>.
+          Choose fiat or EVM crypto, then connect to validate.
+        </p>
 
-          <div class="ctaRow">
-            <a class="btn primary" href="#payment" data-goto="pay">Go to Payments <span>→</span></a>
-            <a class="btn ghost" href="#buy" data-goto="buy">How to buy &amp; send <span>→</span></a>
+        <div class="heroBadges">
+          <span class="pill">Urban / Neon</span>
+          <span class="pill">Wallet-gated</span>
+          <span class="pill">Fiat + EVM</span>
+          <span class="pill">No fluff</span>
+        </div>
+
+        <div class="heroActions">
+          <a class="btn primary" href="#pay">Go to Payments →</a>
+          <a class="btn ghost" href="#buy">How to buy &amp; send →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK START -->
+    <section class="card" id="quickstart">
+      <div class="cardHeader">
+        <span class="kicker">Quick Start</span>
+        <span class="muted">3 steps</span>
+      </div>
+
+      <h2 class="cardTitle">Pay once → unlock forever</h2>
+      <p class="cardSub">Choose fiat or EVM crypto. Then verify access by wallet connect.</p>
+
+      <div class="steps">
+        <div class="step"><span class="stepNum">1</span><span class="stepText">Watch the intro</span></div>
+        <div class="step"><span class="stepNum">2</span><span class="stepText">Pick a payment rail</span></div>
+        <div class="step"><span class="stepNum">3</span><span class="stepText">Wallet connect to unlock</span></div>
+      </div>
+
+      <div class="cardActions">
+        <a class="btn primary" href="#pay">Go to Payments →</a>
+        <a class="btn ghost" href="#buy">How to buy &amp; send →</a>
+      </div>
+    </section>
+
+    <!-- INTRO VIDEO -->
+    <section class="card" id="intro">
+      <div class="cardHeader">
+        <span class="kicker">Intro Video</span>
+        <span class="muted">≈ 5:00</span>
+      </div>
+
+      <div class="videoShell">
+        <!-- Replace VIDEO_ID with your real YouTube/Vimeo embed -->
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Vibe’n intro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="videoFooter">
+        <div class="dot"></div>
+        <div class="muted">No fluff. Proof build mindset.</div>
+        <a class="btn mini" href="#pay">Jump to payment rails →</a>
+      </div>
+    </section>
+
+    <!-- BUY & SEND -->
+    <section class="card" id="buy">
+      <div class="cardHeader">
+        <span class="kicker">Buy &amp; Send Step-by-step</span>
+        <span class="muted">Do this once</span>
+      </div>
+
+      <div class="twoCol">
+        <div class="panel">
+          <h3>Option A — Coinbase (Simple)</h3>
+          <ol>
+            <li>Buy crypto (USDC recommended for stability).</li>
+            <li>Open <strong>Send</strong> → paste the payment address.</li>
+            <li>Select the correct network (Base / Ethereum / Polygon).</li>
+            <li>Confirm → keep the tx hash for proof.</li>
+          </ol>
+          <p class="warn">Rule: <strong>network must match</strong> the invoice network.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Option B — MetaMask (EVM)</h3>
+          <ol>
+            <li>Get ETH for gas + USDC for payment.</li>
+            <li>Open MetaMask → <strong>Send</strong>.</li>
+            <li>Paste address → set amount → confirm.</li>
+            <li>Save tx hash, then wallet-connect to unlock.</li>
+          </ol>
+          <p class="warn">If you mess up network, funds can be stuck. Slow down here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT RAILS -->
+    <section class="card" id="pay">
+      <div class="cardHeader">
+        <span class="kicker">Payment Rails</span>
+        <span class="muted">Choose one</span>
+      </div>
+
+      <div class="rails">
+        <a class="rail" href="#" target="_blank" rel="noreferrer">
+          <div class="railTitle">Card / Apple Pay (Stripe)</div>
+          <div class="railSub">Fastest checkout</div>
+          <div class="railArrow">→</div>
+        </a>
+
+        <a class="rail" href="#" target="_blank" rel="noreferrer">
+          <div class="railTitle">Crypto (Coinbase Commerce)</div>
+          <div class="railSub">USDC / ETH / more</div>
+          <div class="railArrow">→</div>
+        </a>
+
+        <a class="rail" href="#" target="_blank" rel="noreferrer">
+          <div class="railTitle">Bitcoin (BTCPay)</div>
+          <div class="railSub">Direct BTC payments</div>
+          <div class="railArrow">→</div>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="alreadyPaid">
+        <h3>Already paid?</h3>
+        <p class="muted">Hit access. If you’re gating by code/token, route them to your gate page here.</p>
+        <a class="btn primary" href="#access">Access Gated Content →</a>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section class="card" id="access">
+      <div class="cardHeader">
+        <span class="kicker">Access</span>
+        <span class="muted">Wallet verification</span>
+      </div>
+
+      <h2 class="cardTitle">Connect wallet</h2>
+      <p class="cardSub">
+        This button is your gate. Wire it to WalletConnect / wagmi later.
+      </p>
+
+      <div class="cardActions">
+        <button class="btn primary" id="connectBtn">Wallet Connect (Gate) →</button>
+        <button class="btn ghost" id="verifyBtn">Verify Purchase →</button>
+      </div>
+
+      <div class="gated" id="gatedBox" aria-live="polite">
+        <div class="lockRow">
+          <span class="lockIcon">🔒</span>
+          <div>
+            <div class="lockTitle">Locked</div>
+            <div class="muted">Connect + verify to reveal course modules.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TABS -->
-    <section class="tabs">
-      <!-- INTRO -->
-      <article id="intro" class="panel isActive">
-        <div class="panelHead">
-          <div class="panelLabel">INTRO VIDEO</div>
-          <div class="panelMeta">≈ 5:00</div>
-        </div>
+    <!-- BACKGROUND SWAP -->
+    <section class="card compact" id="background">
+      <div class="cardHeader">
+        <span class="kicker">Background</span>
+        <span class="muted">Tap to swap</span>
+      </div>
 
-        <div class="videoCard">
-          <div class="videoFrame">
-            <!-- Replace with your real intro video embed -->
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Vibe’n Intro"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
+      <div class="bgPicker" role="group" aria-label="Background picker">
+        <button class="swatch active" data-bg="assets/bg-room.PNG" aria-label="Room background"></button>
+        <button class="swatch" data-bg="assets/bg-viben-01.PNG" aria-label="City 1 background"></button>
+        <button class="swatch" data-bg="assets/bg-viben-02.PNG" aria-label="City 2 background"></button>
+        <button class="swatch" data-bg="assets/bg-viben-03.PNG" aria-label="City 3 background"></button>
+      </div>
 
-          <div class="videoFooter">
-            <div class="dot"></div>
-            <div class="muted">No fluff. Proof build mindset.</div>
-            <button class="miniBtn" type="button" data-goto="pay">Jump to payment rails <span>→</span></button>
-          </div>
-        </div>
-      </article>
-
-      <!-- BUY & SEND -->
-      <article id="buy" class="panel">
-        <div class="panelHead">
-          <div class="panelLabel">BUY &amp; SEND</div>
-          <div class="panelMeta">Step-by-step</div>
-        </div>
-
-        <div class="grid2">
-          <div class="glass">
-            <h3>Option A — Coinbase (Beginner)</h3>
-            <ol>
-              <li>Buy USDC (or ETH if required) in Coinbase.</li>
-              <li>Open <b>Send</b> → paste the payment address.</li>
-              <li>Select the correct network (Base / Ethereum / Polygon).</li>
-              <li>Confirm → keep the tx hash for proof.</li>
-            </ol>
-            <div class="warn">Rule: network must match the invoice network.</div>
-          </div>
-
-          <div class="glass">
-            <h3>Option B — MetaMask (EVM)</h3>
-            <ol>
-              <li>Get ETH for gas + USDC for payment.</li>
-              <li>Open MetaMask → <b>Send</b>.</li>
-              <li>Paste address → set amount → confirm.</li>
-              <li>Save tx hash, then wallet-connect to unlock.</li>
-            </ol>
-            <div class="warn">If you mess up network = funds can be stuck. Slow down here.</div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PAYMENT RAILS -->
-      <article id="pay" class="panel">
-        <div class="panelHead">
-          <div class="panelLabel">PAYMENT RAILS</div>
-          <div class="panelMeta">Choose one</div>
-        </div>
-
-        <div class="payGrid" id="payment">
-          <a class="payCard" href="#" role="button">
-            <div class="payTitle">Card / Apple Pay (Stripe)</div>
-            <div class="paySub">Fastest checkout</div>
-            <div class="payArrow">→</div>
-          </a>
-
-          <a class="payCard" href="#" role="button">
-            <div class="payTitle">Crypto (Coinbase Commerce)</div>
-            <div class="paySub">USDC / ETH / more</div>
-            <div class="payArrow">→</div>
-          </a>
-
-          <a class="payCard" href="#" role="button">
-            <div class="payTitle">Bitcoin (BTCPay)</div>
-            <div class="paySub">Direct BTC payments</div>
-            <div class="payArrow">→</div>
-          </a>
-        </div>
-
-        <div class="glass subtle">
-          <div class="muted"><b>Already paid?</b> Hit access. If you’re gating by code/token, send them to your gate page here.</div>
-          <a class="btn primary" href="#access" data-goto="access">Access Gated Content <span>→</span></a>
-        </div>
-      </article>
-
-      <!-- ACCESS -->
-      <article id="access" class="panel">
-        <div class="panelHead">
-          <div class="panelLabel">ACCESS</div>
-          <div class="panelMeta">Wallet verification</div>
-        </div>
-
-        <div class="grid2">
-          <div class="glass">
-            <h3>Connect wallet</h3>
-            <p class="muted">This button is your gate. Wire it to WalletConnect / wagmi later.</p>
-            <button class="btn primary" type="button" id="connectBtn">Wallet Connect (Gate) <span>→</span></button>
-            <p class="muted small">Once connected, you’ll validate purchase (token/NFT/allowlist/tx hash) then reveal content.</p>
-          </div>
-
-          <div class="glass">
-            <h3>Gated content</h3>
-            <p class="muted">Placeholder container (hidden until verified).</p>
-            <div class="lockedBox" id="lockedBox">
-              <div class="lockRow">
-                <span class="lockIcon">🔒</span>
-                <div>
-                  <div class="lockTitle">Locked</div>
-                  <div class="muted small">Connect + verify to reveal course modules.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="unlockedBox isHidden" id="unlockedBox">
-              <div class="lockRow">
-                <span class="lockIcon">✅</span>
-                <div>
-                  <div class="lockTitle">Unlocked</div>
-                  <div class="muted small">Replace this with your gated dashboard/content embed.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass">
-          <div class="panelHead tight">
-            <div class="panelLabel">BACKGROUND</div>
-            <div class="panelMeta">Tap to swap</div>
-          </div>
-          <div class="bgRow">
-            <button class="swatch isActive" data-bg="./assets/bg-room.PNG" title="Gaming Room"></button>
-            <button class="swatch" data-bg="./assets/bg-viben-01.PNG" title="City 01"></button>
-            <button class="swatch" data-bg="./assets/bg-viben-02.PNG" title="City 02"></button>
-            <button class="swatch" data-bg="./assets/bg-viben-03.PNG" title="City 03"></button>
-          </div>
-          <div class="muted small">Client-side swap only (no reload). Default is <b>bg-room.PNG</b>.</div>
-        </div>
-      </article>
+      <p class="muted tiny">Client-side swap only (no reload). Default is <strong>bg-room.PNG</strong>.</p>
     </section>
 
     <footer class="footer">
-      <div>Vibe’n — Urban build mindset</div>
-      <div>Wallet gated • Fiat + EVM rails</div>
+      <div class="muted">Vibe’n — Urban build mindset</div>
+      <div class="muted">Wallet gated · Fiat + EVM rails</div>
     </footer>
   </main>
 
   <script>
-    // ---- Tabs ----
-    const pills = Array.from(document.querySelectorAll(".pill"));
-    const panels = Array.from(document.querySelectorAll(".panel"));
-
-    function showTab(id) {
-      panels.forEach(p => p.classList.toggle("isActive", p.id === id));
-      pills.forEach(b => b.classList.toggle("isActive", b.dataset.tab === id));
-      // smooth scroll to tabs start on mobile
-      const top = document.querySelector(".tabs");
-      if (top) top.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    pills.forEach(btn => btn.addEventListener("click", () => showTab(btn.dataset.tab)));
-
-    // goto helpers
-    document.querySelectorAll("[data-goto]").forEach(el => {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        showTab(el.dataset.goto);
-      });
-    });
-
-    // ---- Background swap ----
-    const root = document.documentElement;
-    const swatches = Array.from(document.querySelectorAll(".swatch"));
+    // Background swap (keeps UI stable)
+    const bgEl = document.querySelector('.bg');
+    const swatches = document.querySelectorAll('.swatch');
 
     function setBg(url) {
-      root.style.setProperty("--bgImage", `url("${url}")`);
+      bgEl.style.backgroundImage = `url("${url}")`;
+      localStorage.setItem('viben_bg', url);
     }
 
-    swatches.forEach(s => {
-      s.addEventListener("click", () => {
-        swatches.forEach(x => x.classList.remove("isActive"));
-        s.classList.add("isActive");
-        setBg(s.dataset.bg);
+    const saved = localStorage.getItem('viben_bg');
+    if (saved) setBg(saved);
+    else setBg('assets/bg-room.PNG');
+
+    swatches.forEach(btn => {
+      btn.addEventListener('click', () => {
+        swatches.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        setBg(btn.dataset.bg);
       });
     });
 
-    // Default background
-    setBg("./assets/bg-room.PNG");
+    // Demo gate (placeholder)
+    const connectBtn = document.getElementById('connectBtn');
+    const verifyBtn = document.getElementById('verifyBtn');
+    const gatedBox = document.getElementById('gatedBox');
 
-    // ---- Fake unlock (demo) ----
-    const connectBtn = document.getElementById("connectBtn");
-    const lockedBox = document.getElementById("lockedBox");
-    const unlockedBox = document.getElementById("unlockedBox");
+    let connected = false;
+    let verified = false;
 
-    connectBtn.addEventListener("click", () => {
-      // Replace later with WalletConnect verification
-      lockedBox.classList.add("isHidden");
-      unlockedBox.classList.remove("isHidden");
-      connectBtn.textContent = "Wallet Connected (Demo) ✓";
-      connectBtn.disabled = true;
+    connectBtn.addEventListener('click', () => {
+      connected = true;
+      connectBtn.textContent = 'Wallet Connected ✓';
+      connectBtn.classList.add('success');
+      gatedBox.innerHTML = '<div class="lockRow"><span class="lockIcon">🟡</span><div><div class="lockTitle">Connected</div><div class="muted">Now verify purchase to unlock.</div></div></div>';
+    });
+
+    verifyBtn.addEventListener('click', () => {
+      if (!connected) {
+        gatedBox.innerHTML = '<div class="lockRow"><span class="lockIcon">⚠️</span><div><div class="lockTitle">Connect first</div><div class="muted">Wallet must be connected before verification.</div></div></div>';
+        return;
+      }
+      verified = true;
+      gatedBox.innerHTML = '<div class="lockRow"><span class="lockIcon">🔓</span><div><div class="lockTitle">Unlocked</div><div class="muted">Replace this with your gated modules/content.</div></div></div>';
     });
   </script>
 </body>
