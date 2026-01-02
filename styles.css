@@ -22,7 +22,7 @@
   /* Put your background images here:
      /assets/bg-viben-01.png, bg-viben-02.png, bg-viben-03.png
      Default uses --bgImage which JS sets */
-  --bgImage: url("assets/bg-viben-01.png");
+  --bgImage: url("assets/bg-viben-01.PNG");
 }
 
 *{ box-sizing:border-box; }
