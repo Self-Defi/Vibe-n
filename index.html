@@ -2,109 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course with wallet verification." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course." />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- Background image layer -->
+  <!-- Background layers -->
   <div class="bg" aria-hidden="true"></div>
   <div class="bgOverlay" aria-hidden="true"></div>
 
   <!-- Top bar -->
   <header class="topbar">
     <div class="brand">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
       <div class="brandText">
-        <div class="brandName">Vibe’n</div>
+        <div class="brandTitle">Vibe’n</div>
         <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
       </div>
     </div>
 
-    <nav class="nav">
-      <a class="navLink" href="./intro.html">Intro</a>
-      <a class="navLink" href="./buy-send.html">Buy &amp; Send</a>
-      <a class="navLink" href="./payments.html">Payment Rails</a>
-      <a class="navLink" href="./access.html">Access</a>
-    </nav>
+    <div class="statusPill">Urban • Neon • Wallet-gated</div>
   </header>
 
   <main class="wrap">
-    <section class="hero">
-      <div class="heroInner">
-        <h1>Build fast. Ship clean. Get paid.</h1>
-        <p class="lede">
-          Unlock the gated course with wallet verification. Choose fiat or EVM crypto, then connect to validate.
+    <!-- HERO -->
+    <section class="heroCard">
+      <div class="heroLeft">
+        <h1 class="heroH1">Build fast. Ship clean. Get paid.</h1>
+        <p class="heroP">
+          Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
         </p>
 
-        <div class="chips">
-          <span class="chip">Urban / Neon</span>
-          <span class="chip">Wallet-gated</span>
-          <span class="chip">Fiat + EVM</span>
-          <span class="chip">No fluff</span>
+        <div class="ctaRow">
+          <button class="cta ctaFiat" data-modal="modal-fiat">
+            <span class="ctaTitle">Fiat Pay</span>
+            <span class="ctaSub">Card / Apple Pay</span>
+          </button>
+
+          <button class="cta ctaCrypto" data-modal="modal-crypto">
+            <span class="ctaTitle">Crypto Pay</span>
+            <span class="ctaSub">USDC / ETH</span>
+          </button>
+
+          <button class="cta ctaBuy" data-modal="modal-buy">
+            <span class="ctaTitle">Buy Crypto</span>
+            <span class="ctaSub">Step-by-step</span>
+          </button>
+        </div>
+
+        <div class="microNote">
+          Tip: Use the buttons above — this page stays clean by design.
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <div class="videoShell">
+          <div class="videoTop">
+            <span class="videoLabel">INTRO VIDEO</span>
+            <span class="videoTime">≈ 5:00</span>
+          </div>
+
+          <!-- Replace the src video id with YOUR intro video -->
+          <div class="videoFrame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&playsinline=1"
+              title="Vibe’n Intro Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="videoBottom">
+            <span class="dot"></span>
+            <span>No fluff. Proof build mindset.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Tiles -->
-    <section class="tiles" aria-label="Choose a section">
-      <a class="tile tileIntro" href="./intro.html">
-        <div class="tileTop">
-          <div class="tileKicker">INTRO</div>
-          <div class="tileBadge">≈ 5:00</div>
-        </div>
-        <div class="tileTitle">Watch the intro</div>
-        <div class="tileDesc">Get the vibe + what you’ll unlock.</div>
-        <div class="tileCta">Open →</div>
-      </a>
-
-      <a class="tile tileBuy" href="./buy-send.html">
-        <div class="tileTop">
-          <div class="tileKicker">BUY &amp; SEND</div>
-          <div class="tileBadge">Step-by-step</div>
-        </div>
-        <div class="tileTitle">Buy crypto + send payment</div>
-        <div class="tileDesc">Do this once. Keep the tx hash.</div>
-        <div class="tileCta">Open →</div>
-      </a>
-
-      <a class="tile tilePay" href="./payments.html">
-        <div class="tileTop">
-          <div class="tileKicker">PAYMENT RAILS</div>
-          <div class="tileBadge">Fiat / EVM / BTC</div>
-        </div>
-        <div class="tileTitle">Choose a payment rail</div>
-        <div class="tileDesc">Card / Apple Pay, Coinbase Commerce, BTC.</div>
-        <div class="tileCta">Open →</div>
-      </a>
-
-      <a class="tile tileAccess" href="./access.html">
-        <div class="tileTop">
-          <div class="tileKicker">ACCESS</div>
-          <div class="tileBadge">Wallet Connect</div>
-        </div>
-        <div class="tileTitle">Connect wallet to unlock</div>
-        <div class="tileDesc">Verify purchase, then reveal content.</div>
-        <div class="tileCta">Open →</div>
-      </a>
-    </section>
-
     <footer class="footer">
-      <div class="footerLeft">Vibe’n — Urban build mindset</div>
-      <div class="footerRight">Wallet gated · Fiat + EVM rails</div>
+      <span>Vibe’n</span>
+      <span class="sep">•</span>
+      <span>Pay once. Unlock forever.</span>
     </footer>
   </main>
 
+  <!-- MODALS (lightweight placeholders; wire later) -->
+  <div class="modal" id="modal-fiat" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Fiat Pay">
+      <div class="modalHead">
+        <div>
+          <div class="modalTitle">Fiat Pay</div>
+          <div class="modalSub">Card / Apple Pay checkout</div>
+        </div>
+        <button class="iconBtn" data-close aria-label="Close">✕</button>
+      </div>
+
+      <div class="modalBody">
+        <div class="callout">
+          Wire this button to your Stripe Payment Link or Checkout Session URL.
+        </div>
+        <div class="btnRow">
+          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Stripe Checkout →</a>
+          <button class="ghostBtn" data-close>Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-crypto" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Crypto Pay">
+      <div class="modalHead">
+        <div>
+          <div class="modalTitle">Crypto Pay</div>
+          <div class="modalSub">USDC / ETH via commerce invoice</div>
+        </div>
+        <button class="iconBtn" data-close aria-label="Close">✕</button>
+      </div>
+
+      <div class="modalBody">
+        <div class="callout">
+          Wire this button to Coinbase Commerce / thirdweb Pay / your invoice page.
+        </div>
+        <div class="btnRow">
+          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Crypto Checkout →</a>
+          <button class="ghostBtn" data-close>Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-buy" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Buy Crypto">
+      <div class="modalHead">
+        <div>
+          <div class="modalTitle">Buy Crypto</div>
+          <div class="modalSub">Do this once, then send payment</div>
+        </div>
+        <button class="iconBtn" data-close aria-label="Close">✕</button>
+      </div>
+
+      <div class="modalBody">
+        <ol class="steps">
+          <li>Buy USDC (or ETH) using a trusted on-ramp.</li>
+          <li>Copy the payment address from your checkout/invoice.</li>
+          <li>Send funds on the correct network. Save the tx hash.</li>
+        </ol>
+
+        <div class="btnRow">
+          <a class="linkBtn" href="#" target="_blank" rel="noopener">Open Buy & Send Guide →</a>
+          <button class="ghostBtn" data-close>Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Default background (room). Change BG per page by setting: data-bg="bg-viben-01.PNG" etc.
-    const bg = document.querySelector('.bg');
-    const pageBg = document.body.getAttribute('data-bg') || 'bg-room.PNG';
-    bg.style.backgroundImage = `url("./assets/${pageBg}")`;
+    // Simple modal controller (no frameworks)
+    const openers = document.querySelectorAll("[data-modal]");
+    const closers = document.querySelectorAll("[data-close]");
+    const modals  = document.querySelectorAll(".modal");
+
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (!m) return;
+      m.classList.add("show");
+      m.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modalOpen");
+    }
+
+    function closeModal(m) {
+      m.classList.remove("show");
+      m.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modalOpen");
+    }
+
+    openers.forEach(btn => {
+      btn.addEventListener("click", () => openModal(btn.dataset.modal));
+    });
+
+    closers.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const m = btn.closest(".modal");
+        if (m) closeModal(m);
+      });
+    });
+
+    modals.forEach(m => {
+      m.addEventListener("click", (e) => {
+        if (e.target === m) closeModal(m);
+      });
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        modals.forEach(m => m.classList.contains("show") && closeModal(m));
+      }
+    });
   </script>
 </body>
 </html>
