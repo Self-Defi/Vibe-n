@@ -1,70 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Buy Crypto — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="hasBg">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bgOverlay" aria-hidden="true"></div>
-
+<body class="page">
   <header class="topbar">
-    <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-      <div class="brandText">
-        <div class="brandTitle">Vibe’n</div>
-        <div class="brandSub">Buy crypto step-by-step.</div>
-      </div>
-    </a>
-
-    <nav class="navTabs" aria-label="Primary">
-      <a class="tab" href="./access.html">Wallet Connect</a>
-      <a class="tab" href="./fiat.html">Fiat Payment</a>
-      <a class="tab" href="./crypto.html">Crypto Payment</a>
-      <a class="tab tabActive" href="./buy-crypto.html">Buy Crypto</a>
-    </nav>
+    <div class="topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+        <div class="brand__text">
+          <div class="brand__name">Vibe’n</div>
+          <div class="brand__tag">Do this once. Keep the tx hash.</div>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__pill" href="./index.html">Intro</a>
+        <a class="nav__pill" href="./access.html">Wallet Connect</a>
+        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
+        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
+        <a class="nav__pill is-active" href="./buy-crypto.html">Buy Crypto</a>
+        <a class="nav__pill" href="./presentation.html">Presentation</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
-    <section class="heroCard">
-      <div class="heroCopy">
-        <h1>Buy Crypto (do this once)</h1>
-        <p class="lede">Fast path: buy USDC, then come back and pay via Crypto Payment.</p>
-      </div>
+    <section class="card hero">
+      <h1 class="hero__title">Buy crypto → send payment</h1>
+      <p class="hero__sub">Simple flow. Don’t rush network selection.</p>
 
-      <div class="videoCard" style="margin-top:12px;">
-        <div class="videoTop">
-          <div class="chip">STEP-BY-STEP</div>
-          <div class="chip chipGhost">Beginner-safe</div>
-        </div>
-
-        <div style="padding:14px 16px; color: rgba(255,255,255,.80);">
-          <ol style="margin:0; padding-left:18px; line-height:1.6;">
-            <li>Pick an exchange/app you already trust (Coinbase / Kraken, etc.).</li>
-            <li>Buy <b>USDC</b> on the same chain you’ll pay on (Base / Ethereum / Polygon).</li>
-            <li>Copy the payment address from the <b>Crypto Payment</b> page.</li>
-            <li>Send USDC → confirm → save the <b>tx hash</b>.</li>
-            <li>Return to <b>Wallet Connect</b> to unlock.</li>
-          </ol>
-          <p style="margin:12px 0 0; color: rgba(255,255,255,.62);">
-            Rule: chain/network must match the invoice chain.
-          </p>
-        </div>
-
-        <div class="videoFoot">
-          <span><span class="dot"></span>Once you have USDC, pay and save your tx hash.</span>
-          <a class="miniLink" href="./crypto.html">Go to Crypto Payment →</a>
-        </div>
+      <div class="card" style="margin-top:14px; padding:16px; background:rgba(10,14,28,.35); border:1px solid rgba(255,255,255,.10);">
+        <div style="color:rgba(255,255,255,.88); font-weight:750; margin-bottom:10px;">Steps</div>
+        <ol style="margin:0; padding-left:18px; color:rgba(255,255,255,.74); line-height:1.55;">
+          <li>Buy USDC (or required asset) on your preferred on-ramp.</li>
+          <li>Confirm the target network (Base / Ethereum / Polygon) matches the invoice.</li>
+          <li>Send → paste invoice address → set amount → confirm.</li>
+          <li>Save tx hash, then go to Wallet Connect to unlock.</li>
+        </ol>
+        <p style="margin:12px 0 0; color:rgba(255,255,255,.60);">
+          Rule: network must match the invoice network. If you mess up, funds can be stuck.
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footerInner">
-      <span>Powered By Self Defi</span><span class="sep">•</span><span>Digital Infrastructure Architect</span>
-    </div>
+    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
   </footer>
 </body>
 </html>
+
