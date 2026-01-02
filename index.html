@@ -1,108 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course." />
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-room">
-  <!-- Background layers -->
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bgOverlay" aria-hidden="true"></div>
+<body>
+  <!-- Background layers are handled in CSS (body::before and body::after) -->
 
-  <!-- Top Nav -->
   <header class="topbar">
-    <div class="brand">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-      <div class="brandText">
-        <div class="brandTitle">Vibe’n</div>
-        <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
-      </div>
-    </div>
+    <div class="topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Vibe’n home">
+        <img class="brand__logo" src="assets/vc-logo-transparent.PNG" alt="Vibe Coding logo" />
+        <div class="brand__text">
+          <div class="brand__title">Vibe’n</div>
+          <div class="brand__sub">5-minute intro. Pay once. Unlock the gated course.</div>
+        </div>
+      </a>
 
-    <nav class="navPills" aria-label="Primary">
-      <a class="pill" href="./access.html">Wallet Connect</a>
-      <a class="pill" href="./fiat.html">Fiat Payment</a>
-      <a class="pill" href="./crypto.html">Crypto Payment</a>
-      <a class="pill pillGlow" href="./buy-crypto.html">Buy Crypto</a>
-    </nav>
+      <nav class="nav">
+        <a class="nav__pill" href="access.html">Wallet Connect</a>
+        <a class="nav__pill" href="fiat.html">Fiat Payment</a>
+        <a class="nav__pill" href="crypto.html">Crypto Payment</a>
+        <a class="nav__pill" href="buy-crypto.html">Buy Crypto</a>
+        <a class="nav__pill" href="presentation.html">Presentation</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
-    <!-- Hero -->
     <section class="hero card">
-      <h1>Build fast. Ship clean. Get paid.</h1>
-      <p class="lead">
-        Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
-      </p>
+      <div class="hero__copy">
+        <h1>Build fast. Ship clean. Get paid.</h1>
+        <p class="hero__sub">
+          Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
+        </p>
+      </div>
 
-      <!-- Intro Video (UNDER HERO TEXT) -->
-      <div class="videoCard">
-        <div class="videoHead">
-          <span class="chip">INTRO VIDEO</span>
-          <span class="chip">≈ 5:00</span>
+      <!-- VIDEO (under headline) -->
+      <section class="video card card--inner" aria-label="Intro video">
+        <div class="video__top">
+          <div class="chip">INTRO VIDEO</div>
+          <div class="chip chip--muted">≈ 5:00</div>
         </div>
 
-        <!-- Option A (Recommended): YouTube/Vimeo embed -->
-        <div class="videoFrame">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Vibe’n Intro"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <!-- Option B (Local MP4): uncomment and set the correct filename
-        <div class="videoFrame">
-          <video controls playsinline preload="metadata" poster="./assets/video-poster.PNG">
-            <source src="./assets/intro.MP4" type="video/mp4" />
+        <!-- OPTION A: Local MP4 (recommended for “embed the file”)
+             Put your file at: assets/intro.mp4  (or rename below to match exactly)
+        -->
+        <div class="video__frame">
+          <video
+            class="video__player"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/bg-room.PNG"
+          >
+            <source src="assets/intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        -->
 
-        <div class="videoFoot">
-          <span class="dot"></span>
-          <span>No fluff. Proof build mindset.</span>
+        <!-- OPTION B: YouTube embed (if you don’t have the MP4 yet)
+        <div class="video__frame">
+          <iframe
+            class="video__embed"
+            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+            title="Intro video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
-      </div>
-
-      <!-- Clean Action Boxes (neon-highlight clickable) -->
-      <div class="actions">
-        <a class="actionBox" href="./fiat.html">
-          <div class="actionTop">
-            <span class="actionTitle">Fiat Pay</span>
-            <span class="tag">Card / Apple Pay</span>
-          </div>
-          <div class="actionHint">Open →</div>
-        </a>
-
-        <a class="actionBox" href="./crypto.html">
-          <div class="actionTop">
-            <span class="actionTitle">Crypto Pay</span>
-            <span class="tag">USDC / ETH</span>
-          </div>
-          <div class="actionHint">Open →</div>
-        </a>
-
-        <a class="actionBox actionBoxAccent" href="./buy-crypto.html">
-          <div class="actionTop">
-            <span class="actionTitle">Buy Crypto</span>
-            <span class="tag">Step-by-step</span>
-          </div>
-          <div class="actionHint">Open →</div>
-        </a>
-      </div>
+        -->
+      </section>
     </section>
-  </main>
 
-  <footer class="footer">
-    Powered By Self Defi · Digital Infrastructure Architect
-  </footer>
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>Powered By Self Defi</span>
+        <span class="dot">•</span>
+        <span>Digital Infrastructure Architect</span>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
