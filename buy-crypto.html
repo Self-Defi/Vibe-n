@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy Crypto — Vibe’n</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="hasBg">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bgOverlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+      <div class="brandText">
+        <div class="brandTitle">Vibe’n</div>
+        <div class="brandSub">Buy crypto step-by-step.</div>
+      </div>
+    </a>
+
+    <nav class="navTabs" aria-label="Primary">
+      <a class="tab" href="./access.html">Wallet Connect</a>
+      <a class="tab" href="./fiat.html">Fiat Payment</a>
+      <a class="tab" href="./crypto.html">Crypto Payment</a>
+      <a class="tab tabActive" href="./buy-crypto.html">Buy Crypto</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="heroCard">
+      <div class="heroCopy">
+        <h1>Buy Crypto (do this once)</h1>
+        <p class="lede">Fast path: buy USDC, then come back and pay via Crypto Payment.</p>
+      </div>
+
+      <div class="videoCard" style="margin-top:12px;">
+        <div class="videoTop">
+          <div class="chip">STEP-BY-STEP</div>
+          <div class="chip chipGhost">Beginner-safe</div>
+        </div>
+
+        <div style="padding:14px 16px; color: rgba(255,255,255,.80);">
+          <ol style="margin:0; padding-left:18px; line-height:1.6;">
+            <li>Pick an exchange/app you already trust (Coinbase / Kraken, etc.).</li>
+            <li>Buy <b>USDC</b> on the same chain you’ll pay on (Base / Ethereum / Polygon).</li>
+            <li>Copy the payment address from the <b>Crypto Payment</b> page.</li>
+            <li>Send USDC → confirm → save the <b>tx hash</b>.</li>
+            <li>Return to <b>Wallet Connect</b> to unlock.</li>
+          </ol>
+          <p style="margin:12px 0 0; color: rgba(255,255,255,.62);">
+            Rule: chain/network must match the invoice chain.
+          </p>
+        </div>
+
+        <div class="videoFoot">
+          <span><span class="dot"></span>Once you have USDC, pay and save your tx hash.</span>
+          <a class="miniLink" href="./crypto.html">Go to Crypto Payment →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footerInner">
+      <span>Powered By Self Defi</span><span class="sep">•</span><span>Digital Infrastructure Architect</span>
+    </div>
+  </footer>
+</body>
+</html>
