@@ -1,69 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crypto Payment — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="hasBg">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bgOverlay" aria-hidden="true"></div>
-
+<body class="page">
   <header class="topbar">
-    <a class="brand" href="./index.html">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-      <div class="brandText">
-        <div class="brandTitle">Vibe’n</div>
-        <div class="brandSub">Crypto payment rail.</div>
-      </div>
-    </a>
-
-    <nav class="navTabs">
-      <a class="tab" href="./access.html">Wallet Connect</a>
-      <a class="tab" href="./fiat.html">Fiat Payment</a>
-      <a class="tab tabActive" href="./crypto.html">Crypto Payment</a>
-      <a class="tab" href="./buy-crypto.html">Buy Crypto</a>
-    </nav>
+    <div class="topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
+        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+        <div class="brand__text">
+          <div class="brand__name">Vibe’n</div>
+          <div class="brand__tag">USDC / ETH (Coinbase Commerce or EVM).</div>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__pill" href="./index.html">Intro</a>
+        <a class="nav__pill" href="./access.html">Wallet Connect</a>
+        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
+        <a class="nav__pill is-active" href="./crypto.html">Crypto Payment</a>
+        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
+        <a class="nav__pill" href="./presentation.html">Presentation</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
-    <section class="heroCard">
-      <div class="heroCopy">
-        <h1>Crypto Pay</h1>
-        <p class="lede">USDC / ETH. Replace address + network with your real invoice details.</p>
+    <section class="card hero">
+      <h1 class="hero__title">Crypto Pay</h1>
+      <p class="hero__sub">Pay with USDC/ETH. Network must match invoice network.</p>
+
+      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="nav__pill" href="#" onclick="alert('Paste Coinbase Commerce / invoice link here.'); return false;">Open Crypto Invoice →</a>
       </div>
 
-      <div class="videoCard" style="margin-top:12px;">
-        <div class="videoTop">
-          <div class="chip">PAYMENT DETAILS</div>
-          <div class="chip chipGhost">Network: Base</div>
-        </div>
-
-        <div style="padding:14px 16px; color: rgba(255,255,255,.80); line-height:1.7;">
-          <div><b>Token:</b> USDC</div>
-          <div><b>Network:</b> Base</div>
-          <div style="margin-top:10px;"><b>Address:</b></div>
-          <code style="display:block; margin-top:6px; padding:12px; border-radius:14px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); color: rgba(255,255,255,.88); overflow:auto;">
-0xYOUR_PAYMENT_ADDRESS_HERE
-          </code>
-          <p style="margin:12px 0 0; color: rgba(255,255,255,.62);">
-            Rule: network must match the invoice network.
-          </p>
-        </div>
-
-        <div class="videoFoot">
-          <span><span class="dot"></span>Send → confirm → save tx hash.</span>
-          <a class="miniLink" href="./access.html">Go to Wallet Connect →</a>
-        </div>
-      </div>
+      <p class="hero__sub" style="margin-top:16px;">
+        After payment: save tx hash → go to <a href="./access.html" style="color:rgba(255,255,255,.86);">Wallet Connect</a>.
+      </p>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footerInner">
-      <span>Powered By Self Defi</span><span class="sep">•</span><span>Digital Infrastructure Architect</span>
-    </div>
+    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
   </footer>
 </body>
 </html>
