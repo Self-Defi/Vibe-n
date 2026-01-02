@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto Payment — Vibe’n</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="hasBg">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bgOverlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./index.html">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
+      <div class="brandText">
+        <div class="brandTitle">Vibe’n</div>
+        <div class="brandSub">Crypto payment rail.</div>
+      </div>
+    </a>
+
+    <nav class="navTabs">
+      <a class="tab" href="./access.html">Wallet Connect</a>
+      <a class="tab" href="./fiat.html">Fiat Payment</a>
+      <a class="tab tabActive" href="./crypto.html">Crypto Payment</a>
+      <a class="tab" href="./buy-crypto.html">Buy Crypto</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="heroCard">
+      <div class="heroCopy">
+        <h1>Crypto Pay</h1>
+        <p class="lede">USDC / ETH. Replace address + network with your real invoice details.</p>
+      </div>
+
+      <div class="videoCard" style="margin-top:12px;">
+        <div class="videoTop">
+          <div class="chip">PAYMENT DETAILS</div>
+          <div class="chip chipGhost">Network: Base</div>
+        </div>
+
+        <div style="padding:14px 16px; color: rgba(255,255,255,.80); line-height:1.7;">
+          <div><b>Token:</b> USDC</div>
+          <div><b>Network:</b> Base</div>
+          <div style="margin-top:10px;"><b>Address:</b></div>
+          <code style="display:block; margin-top:6px; padding:12px; border-radius:14px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); color: rgba(255,255,255,.88); overflow:auto;">
+0xYOUR_PAYMENT_ADDRESS_HERE
+          </code>
+          <p style="margin:12px 0 0; color: rgba(255,255,255,.62);">
+            Rule: network must match the invoice network.
+          </p>
+        </div>
+
+        <div class="videoFoot">
+          <span><span class="dot"></span>Send → confirm → save tx hash.</span>
+          <a class="miniLink" href="./access.html">Go to Wallet Connect →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footerInner">
+      <span>Powered By Self Defi</span><span class="sep">•</span><span>Digital Infrastructure Architect</span>
+    </div>
+  </footer>
+</body>
+</html>
