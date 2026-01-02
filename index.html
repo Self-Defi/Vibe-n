@@ -1,35 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course with wallet verification." />
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course with wallet verification." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background layers (image + cinematic overlays) -->
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bgOverlay" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bgImg"></div>
+    <div class="bgOverlay"></div>
+    <div class="bgVignette"></div>
+    <div class="bgNoise"></div>
+  </div>
 
   <!-- Top Bar -->
   <header class="topbar">
     <div class="topbarInner">
       <div class="brand">
-        <img class="brandLogo" src="./assets/logo.png" alt="Vibe Coding logo" />
+        <img
+          class="brandLogo"
+          src="assets/vc-logo-transparent.PNG"
+          onerror="this.onerror=null; this.src='assets/vc-logo-transparent%20.PNG';"
+          alt="Vibe Coding logo"
+        />
         <div class="brandText">
           <div class="brandTitle">Vibe’n</div>
           <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
         </div>
       </div>
 
-      <nav class="tabs" aria-label="Sections">
-        <a class="tab" href="#intro">Intro</a>
-        <a class="tab" href="#buy-send">Buy &amp; Send</a>
-        <a class="tab" href="#payments">Payment Rails</a>
-        <a class="tab" href="#access">Access</a>
+      <nav class="pillNav" aria-label="Primary">
+        <a class="pill active" href="#intro" data-tab="intro">Intro</a>
+        <a class="pill" href="#buysend" data-tab="buysend">Buy &amp; Send</a>
+        <a class="pill" href="#payments" data-tab="payments">Payment Rails</a>
+        <a class="pill" href="#access" data-tab="access">Access</a>
       </nav>
     </div>
   </header>
@@ -37,198 +45,287 @@
   <main class="wrap">
     <!-- HERO -->
     <section class="hero">
-      <div class="heroLeft">
+      <div class="heroInner">
         <h1 class="heroTitle">Vibe’n</h1>
-        <p class="heroCopy">Build fast. Ship clean. Get paid. Unlock the gated course with wallet verification.</p>
+        <p class="heroDesc">Build fast. Ship clean. Get paid. Unlock the gated course with wallet verification.</p>
 
-        <div class="pills">
-          <span class="pill">Urban / Neon</span>
-          <span class="pill">Wallet-gated</span>
-          <span class="pill">Fiat + EVM</span>
-          <span class="pill">No fluff</span>
-        </div>
-      </div>
-
-      <div class="heroRight">
-        <div class="miniCard">
-          <div class="miniCardLabel">Quick Start</div>
-          <div class="miniCardTitle">Pay once → unlock forever</div>
-          <div class="miniSteps">
-            <div class="miniStep"><span class="stepNum">1</span> Watch the intro</div>
-            <div class="miniStep"><span class="stepNum">2</span> Pick a payment rail</div>
-            <div class="miniStep"><span class="stepNum">3</span> Wallet connect to unlock</div>
-          </div>
-          <div class="miniBtns">
-            <a class="btn primary" href="#payments">Go to Payments →</a>
-            <a class="btn ghost" href="#buy-send">How to buy &amp; send →</a>
-          </div>
+        <div class="tagRow" aria-label="Tags">
+          <span class="tag">Urban / Neon</span>
+          <span class="tag">Wallet-gated</span>
+          <span class="tag">Fiat + EVM</span>
+          <span class="tag">No fluff</span>
         </div>
       </div>
     </section>
 
-    <!-- INTRO VIDEO -->
+    <!-- INTRO -->
     <section id="intro" class="card">
       <div class="cardHeader">
-        <div class="chip">Intro Video</div>
+        <div class="chip">INTRO VIDEO</div>
         <div class="muted">≈ 5:00</div>
       </div>
 
       <div class="videoShell">
-        <!-- Replace the src with YOUR intro video embed -->
+        <!-- Replace src with your real embed URL -->
         <iframe
           class="video"
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
           title="Vibe’n Intro"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+          allowfullscreen
+        ></iframe>
       </div>
 
-      <div class="cardFooter">
-        <div class="dotLine">
+      <div class="cardFooterRow">
+        <div class="dotRow">
           <span class="dot"></span>
           <span class="muted">No fluff. Proof build mindset.</span>
         </div>
-        <a class="btn small" href="#payments">Jump to payment rails →</a>
+
+        <a class="btn ghost" href="#payments" data-jump="payments">
+          Jump to payment rails <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- QUICK START -->
+    <section class="card">
+      <div class="cardHeader">
+        <div class="chip">QUICK START</div>
+      </div>
+
+      <h2 class="h2">Pay once → unlock forever</h2>
+      <p class="muted">Choose fiat or EVM crypto. Then verify access by wallet connect.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="stepNum">1</div>
+          <div class="stepText">Watch the intro</div>
+        </div>
+        <div class="step">
+          <div class="stepNum">2</div>
+          <div class="stepText">Pick a payment rail</div>
+        </div>
+        <div class="step">
+          <div class="stepNum">3</div>
+          <div class="stepText">Wallet connect to unlock</div>
+        </div>
+      </div>
+
+      <div class="btnRow">
+        <a class="btn primary" href="#payments" data-jump="payments">Go to Payments <span class="arrow">→</span></a>
+        <a class="btn" href="#buysend" data-jump="buysend">How to buy &amp; send <span class="arrow">→</span></a>
       </div>
     </section>
 
     <!-- BUY & SEND -->
-    <section id="buy-send" class="card">
+    <section id="buysend" class="card">
       <div class="cardHeader">
-        <div class="chip">Buy &amp; Send (Step-by-step)</div>
-        <div class="muted">Beginner-safe</div>
+        <div class="chip">BUY &amp; SEND</div>
+        <div class="muted">Step-by-step</div>
       </div>
 
-      <div class="grid2">
-        <div class="panel">
-          <div class="panelTitle">Buy crypto with fiat</div>
-          <ol class="steps">
-            <li>Open your on-ramp (Stripe / Coinbase / other).</li>
-            <li>Buy <b>USDC</b> (recommended) on the correct network (Base / Ethereum / Polygon).</li>
-            <li>Confirm you can see the balance in your wallet/app.</li>
-          </ol>
-          <div class="hint">Tip: USDC reduces “oops” risk vs volatile coins.</div>
-        </div>
+      <div class="accordion">
+        <details open>
+          <summary><span>Step 1 — Buy USDC (recommended)</span><span class="chev">⌄</span></summary>
+          <div class="panel">
+            <ol>
+              <li>Open a trusted on-ramp (Coinbase / Kraken / MoonPay / etc.).</li>
+              <li>Buy <strong>USDC</strong> (stable, easy accounting, low volatility).</li>
+              <li>Select network: <strong>Base</strong> or <strong>Polygon</strong> (cheap fees) unless you specifically need Ethereum mainnet.</li>
+            </ol>
+          </div>
+        </details>
 
-        <div class="panel">
-          <div class="panelTitle">Send crypto to the payment address</div>
-          <ol class="steps">
-            <li>Copy the payment address from the checkout screen.</li>
-            <li>Verify the network matches (don’t mix chains).</li>
-            <li>Send the exact amount shown.</li>
-            <li>Wait for confirmations → you’ll be marked paid.</li>
-          </ol>
-          <div class="hint">Rule: Address + network must match, every time.</div>
-        </div>
-      </div>
+        <details>
+          <summary><span>Step 2 — Send to the payment address</span><span class="chev">⌄</span></summary>
+          <div class="panel">
+            <ol>
+              <li>Copy the address shown in the checkout screen.</li>
+              <li>Double-check the <strong>network matches</strong> (Base vs Polygon vs ETH).</li>
+              <li>Send the exact amount. Keep the transaction hash.</li>
+            </ol>
+          </div>
+        </details>
 
-      <div class="callout">
-        <div class="calloutTitle">Common mistake to avoid</div>
-        <div class="muted">Sending on the wrong chain. If checkout says Base, don’t send on Ethereum.</div>
+        <details>
+          <summary><span>Step 3 — Verify with wallet connect</span><span class="chev">⌄</span></summary>
+          <div class="panel">
+            <ol>
+              <li>After payment confirms, hit <strong>Wallet Connect</strong>.</li>
+              <li>Sign the message (this proves you control the wallet).</li>
+              <li>If you used a different wallet to pay, connect that wallet for verification.</li>
+            </ol>
+          </div>
+        </details>
       </div>
     </section>
 
-    <!-- PAYMENT RAILS -->
+    <!-- PAYMENTS -->
     <section id="payments" class="card">
       <div class="cardHeader">
-        <div class="chip">Payment Rails</div>
+        <div class="chip">PAYMENT RAILS</div>
         <div class="muted">Choose one</div>
       </div>
 
       <div class="railGrid">
-        <a class="rail" href="#" role="button">
-          <div class="railTitle">Card / Apple Pay</div>
-          <div class="railSub muted">Stripe (fastest checkout)</div>
-          <div class="railTag">Fiat</div>
+        <a class="rail" href="#" onclick="return false;">
+          <div class="railTop">
+            <div class="railIcon">💳</div>
+            <div class="railTitle">Card / Apple Pay</div>
+          </div>
+          <div class="railSub muted">Stripe checkout</div>
+          <div class="railMeta">Fastest checkout</div>
         </a>
 
-        <a class="rail" href="#" role="button">
-          <div class="railTitle">Crypto</div>
-          <div class="railSub muted">Coinbase Commerce / EVM</div>
-          <div class="railTag">USDC / ETH</div>
+        <a class="rail" href="#" onclick="return false;">
+          <div class="railTop">
+            <div class="railIcon">🪙</div>
+            <div class="railTitle">Crypto (EVM)</div>
+          </div>
+          <div class="railSub muted">Coinbase Commerce / onchain</div>
+          <div class="railMeta">USDC / ETH / more</div>
         </a>
 
-        <a class="rail" href="#" role="button">
-          <div class="railTitle">Bitcoin</div>
+        <a class="rail" href="#" onclick="return false;">
+          <div class="railTop">
+            <div class="railIcon">₿</div>
+            <div class="railTitle">Bitcoin</div>
+          </div>
           <div class="railSub muted">BTCPay Server</div>
-          <div class="railTag">BTC</div>
+          <div class="railMeta">Direct BTC</div>
         </a>
       </div>
 
-      <div class="cardFooter">
-        <div class="muted">Already paid? Verify access below.</div>
-        <a class="btn small primary" href="#access">Access Gated Content →</a>
+      <div class="note">
+        <div class="noteTitle">Already paid?</div>
+        <div class="muted">Hit Access. If you’re gating by code/token later, wire that there.</div>
       </div>
     </section>
 
     <!-- ACCESS -->
     <section id="access" class="card">
       <div class="cardHeader">
-        <div class="chip">Access</div>
+        <div class="chip">ACCESS</div>
         <div class="muted">Wallet verification</div>
       </div>
 
-      <div class="grid2">
-        <div class="panel">
-          <div class="panelTitle">Connect wallet to unlock</div>
-          <p class="muted">
-            This button is your “gated content” door. In production, you’ll wire it to your wallet provider
-            + verification logic (token/NFT, signed message, or receipt lookup).
-          </p>
+      <div class="accessBox">
+        <button class="btn primary wide" id="connectBtn" type="button">
+          Wallet Connect to Unlock <span class="arrow">→</span>
+        </button>
 
-          <button class="btn primary wide" id="connectBtn" type="button">
-            Wallet Connect → Unlock
-          </button>
-
-          <div class="hint">Right now it’s UI-only. Next step: wire WalletConnect / SIWE / token-gate.</div>
+        <div class="lockRow">
+          <div class="lockPill" id="accessState">
+            <span class="lockDot"></span>
+            Locked — connect wallet after purchase
+          </div>
+          <div class="muted small" id="walletLine">No wallet connected</div>
         </div>
 
-        <div class="panel">
-          <div class="panelTitle">What unlock means</div>
-          <ul class="bullets">
-            <li>Wallet connected</li>
-            <li>Payment confirmed (fiat receipt or onchain tx)</li>
-            <li>Gated route enabled (course modules)</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <div class="muted smallText">
-            If you want pure wallet gating: mint a pass NFT after payment, then check ownership.
+        <div class="gated" id="gatedPanel" aria-hidden="true">
+          <h3 class="h3">Gated Content</h3>
+          <p class="muted">Replace this block with your course modules / links once verification is wired.</p>
+          <div class="gatedGrid">
+            <a class="gatedItem" href="#" onclick="return false;">Module 1 — Setup</a>
+            <a class="gatedItem" href="#" onclick="return false;">Module 2 — First Build</a>
+            <a class="gatedItem" href="#" onclick="return false;">Module 3 — Ship</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- BACKGROUND SWITCHER (optional) -->
+    <section class="card">
+      <div class="cardHeader">
+        <div class="chip">BACKGROUND</div>
+      </div>
+
+      <div class="bgPicker">
+        <button class="swatch active" type="button" data-bg="assets/bg-room-01.PNG" aria-label="Room background"></button>
+        <button class="swatch" type="button" data-bg="assets/bg-viben-01.PNG" aria-label="City background 1"></button>
+        <button class="swatch" type="button" data-bg="assets/bg-viben-02.PNG" aria-label="City background 2"></button>
+        <button class="swatch" type="button" data-bg="assets/bg-viben-03.PNG" aria-label="City background 3"></button>
+      </div>
+      <div class="muted small">Click to swap background (client-side).</div>
+    </section>
+
     <footer class="footer">
       <div class="muted">Vibe’n — Urban build mindset</div>
-      <div class="muted">Wallet gated • Fiat + EVM rails</div>
+      <div class="muted">Wallet gated · Fiat + EVM rails</div>
     </footer>
   </main>
 
   <script>
-    // UI-only placeholder: swap this later with WalletConnect / wagmi / SIWE
-    document.getElementById('connectBtn')?.addEventListener('click', () => {
-      alert('Wallet connect placeholder. Next: wire WalletConnect + gating verification.');
+    // Smooth tab highlight + jump
+    const pills = document.querySelectorAll(".pillNav .pill");
+    const sections = ["intro","buysend","payments","access"].map(id => document.getElementById(id));
+
+    function setActive(tab) {
+      pills.forEach(p => p.classList.toggle("active", p.dataset.tab === tab));
+    }
+
+    // Click handling
+    document.querySelectorAll("[data-jump]").forEach(el => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = el.getAttribute("data-jump");
+        document.getElementById(id).scrollIntoView({behavior:"smooth", block:"start"});
+        setActive(id);
+      });
     });
 
-    // Smooth scroll that doesn’t hide sections behind sticky header
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        if (!id || id.length < 2) return;
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.scrollY - 92;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+    pills.forEach(p => {
+      p.addEventListener("click", (e) => {
+        const tab = p.dataset.tab;
+        setActive(tab);
       });
+    });
+
+    // Active pill on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) setActive(ent.target.id);
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0.01 });
+
+    sections.forEach(s => s && obs.observe(s));
+
+    // Background swapper
+    const bgImg = document.querySelector(".bgImg");
+    const swatches = document.querySelectorAll(".swatch");
+
+    function applyBg(url) {
+      bgImg.style.backgroundImage = `url('${url}')`;
+    }
+
+    swatches.forEach(btn => {
+      btn.addEventListener("click", () => {
+        swatches.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        applyBg(btn.dataset.bg);
+      });
+    });
+
+    // Default background (ROOM)
+    applyBg("assets/bg-room-01.PNG");
+
+    // Wallet connect placeholder (UI only)
+    const connectBtn = document.getElementById("connectBtn");
+    const accessState = document.getElementById("accessState");
+    const walletLine = document.getElementById("walletLine");
+    const gatedPanel = document.getElementById("gatedPanel");
+
+    connectBtn.addEventListener("click", async () => {
+      // This is a placeholder UX.
+      // When you wire WalletConnect/wagmi, replace this with real connect + signature verification.
+      accessState.innerHTML = '<span class="lockDot ok"></span> Connected (demo) — verification pending';
+      walletLine.textContent = "0xDEMO...WALLET (replace with real wallet address)";
+      gatedPanel.style.display = "block";
+      gatedPanel.setAttribute("aria-hidden","false");
+      gatedPanel.classList.add("show");
     });
   </script>
 </body>
 </html>
-
-
-
