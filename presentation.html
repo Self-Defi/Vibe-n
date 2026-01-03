@@ -6,50 +6,49 @@
   <title>Presentation — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="page">
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">Course intro deck.</div>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandText">
+          <b>Vibe’n</b>
+          <span>Course overview</span>
         </div>
-      </a>
+      </div>
+
       <nav class="nav" aria-label="Primary">
-        <a class="nav__pill" href="./index.html">Intro</a>
-        <a class="nav__pill" href="./access.html">Wallet Connect</a>
-        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill is-active" href="./presentation.html">Presentation</a>
+        <a href="./index.html#intro">Intro</a>
+        <a href="./access.html">Wallet Connect</a>
+        <a href="./fiat.html">Fiat Payment</a>
+        <a href="./crypto.html">Crypto Payment</a>
+        <a href="./buy-crypto.html">Buy Crypto</a>
+        <a class="active" href="./presentation.html">Presentation</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <section class="card hero">
-      <h1 class="hero__title">Presentation</h1>
-      <p class="hero__sub">Inline PDF viewer + direct download link.</p>
+    <main class="card">
+      <div class="cardInner">
+        <h1 class="pageTitle">Presentation</h1>
+        <p class="pageLead">Quick overview deck. Open in-tab or download via your browser controls.</p>
 
-      <!-- Put the PDF in repo root OR /assets. Choose ONE and match the href/src. -->
-      <div class="card" style="margin-top:14px; overflow:hidden; background:rgba(10,14,28,.35); border:1px solid rgba(255,255,255,.10);">
-        <iframe
-          title="Vibe Coding Presentation"
-          src="./vc-thought-becomes-infrastructure.pdf"
-          style="width:100%; height:72vh; border:0;"
-        ></iframe>
+        <div class="pdfFrame" aria-label="Presentation PDF">
+          <iframe src="./assets/vc-section-one.pdf#view=FitH" title="Vibe’n Presentation"></iframe>
+        </div>
+
+        <div class="actions">
+          <a class="btn btnPrimary" href="./assets/vc-section-one.pdf" target="_blank" rel="noreferrer">Open PDF in new tab →</a>
+        </div>
       </div>
+    </main>
 
-      <div style="margin-top:12px;">
-        <a class="nav__pill" href="./vc-thought-becomes-infrastructure.pdf">Open / Download PDF →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
-  </footer>
+    <footer class="footer">
+      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
+    </footer>
+  </div>
 </body>
 </html>
+
 
