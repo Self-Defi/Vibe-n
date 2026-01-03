@@ -1,68 +1,56 @@
-<!-- buy-crypto.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Buy Crypto</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="bg" aria-hidden="true"></div>
+  <div class="bg"></div>
 
-  <header class="topbar">
-    <div class="brand">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
-      <div class="brandCopy">
-        <div class="brandName">Vibe’n</div>
-        <div class="brandTag">5-minute intro. Pay once. Unlock the gated course.</div>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandTitle">
+          <strong>Vibe’n</strong>
+          <span>Step-by-step: buy crypto safely</span>
+        </div>
       </div>
+
+      <nav class="nav">
+        <a class="pill" href="index.html#intro">Intro</a>
+        <a class="pill" href="access.html">Wallet Connect</a>
+        <a class="pill" href="fiat.html">Fiat Payment</a>
+        <a class="pill" href="crypto.html">Crypto Payment</a>
+        <a class="pill active" href="buy-crypto.html">Buy Crypto</a>
+        <a class="pill" href="section1.html">Section 1</a>
+      </nav>
+    </header>
+
+    <main class="card page">
+      <h2>Buy Crypto</h2>
+      <p>Do this once. Keep the tx hash. Then come back and pay.</p>
+
+      <ol class="steps">
+        <li><strong>Choose your rail</strong>: Coinbase / CashApp / onramp of choice.</li>
+        <li><strong>Buy USDC (preferred) or ETH</strong> based on the invoice requirements.</li>
+        <li><strong>Confirm the correct network</strong> before sending.</li>
+        <li><strong>Send payment</strong> → save tx hash.</li>
+        <li><strong>Verify & unlock</strong> on Wallet Connect.</li>
+      </ol>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="assets/wallet-setup-security.pdf" target="_blank" rel="noopener">Open Buy-Crypto PDF →</a>
+        <a class="btn" href="crypto.html">Go to Crypto Payment →</a>
+      </div>
+    </main>
+
+    <div class="footer">
+      Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
     </div>
-
-    <nav class="nav">
-      <a class="navPill" href="./index.html#intro">Intro</a>
-      <a class="navPill" href="./access.html">Wallet Connect</a>
-      <a class="navPill" href="./fiat.html">Fiat Payment</a>
-      <a class="navPill" href="./crypto.html">Crypto Payment</a>
-      <a class="navPill active" href="./buy-crypto.html">Buy Crypto</a>
-      <a class="navPill" href="./assets/vc-section-one.pdf" target="_blank" rel="noreferrer">Section 1</a>
-    </nav>
-  </header>
-
-  <main class="wrap">
-    <section class="card hero">
-      <h1>Buy Crypto</h1>
-      <p class="sub">Step-by-step guide. Use this if you’re starting from zero.</p>
-
-      <div class="videoCard">
-        <div class="videoTop">
-          <span class="chip">GUIDE</span>
-          <span class="chip chipSoft">PDF</span>
-        </div>
-
-        <div style="padding: 10px 2px 2px; color: rgba(255,255,255,.86); line-height:1.6;">
-          <p style="margin:0 0 10px; color: rgba(255,255,255,.72);">
-            Open the guide below (this is the file you uploaded).
-          </p>
-
-          <p style="margin: 0;">
-            <a class="ghostBtn" href="./assets/wallet-setup-security.pdf" target="_blank" rel="noreferrer">
-              Open Buy Crypto Guide → (wallet-setup-security.pdf)
-            </a>
-          </p>
-
-          <p style="margin: 12px 0 0; color: rgba(255,255,255,.65);">
-            After you buy: come back to <a href="./crypto.html" style="color:rgba(255,255,255,.86);">Crypto Payment</a> and send USDC/ETH on the correct network.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
-  </footer>
+  </div>
 </body>
 </html>
 
