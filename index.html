@@ -1,77 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vibe’n — Pay once. Unlock the gated course.</title>
-  <meta name="description" content="5-minute intro. Pay once. Unlock the gated course." />
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Vibe'n — Pay once. Unlock the gated course.</title>
+  <meta name="description" content="Vibe'n — 5-minute intro. Pay once. Unlock the gated course." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="page">
-  <!-- fixed background + overlay is handled in CSS (body::before + body::after) -->
+<body>
+  <!-- BG layers are handled in CSS (body::before + body::after) -->
 
   <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">5-minute intro. Pay once. Unlock the gated course.</div>
+    <div class="topbarInner">
+      <a class="brand" href="index.html" aria-label="Vibe'n home">
+        <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe'n logo" />
+        <div class="brandText">
+          <div class="brandTitle">Vibe’n</div>
+          <div class="brandSub">5-minute intro. Pay once. Unlock the gated course.</div>
         </div>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__pill is-active" href="./index.html">Intro</a>
-        <a class="nav__pill" href="./access.html">Wallet Connect</a>
-        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="./presentation.html">Presentation</a>
+      <nav class="navPills" aria-label="Primary navigation">
+        <a class="pill isActive" href="index.html#intro">Intro</a>
+        <a class="pill" href="access.html">Wallet Connect</a>
+        <a class="pill" href="fiat.html">Fiat Payment</a>
+        <a class="pill" href="crypto.html">Crypto Payment</a>
+        <a class="pill" href="assets/wallet-setup-security.pdf" target="_blank" rel="noopener">Buy Crypto</a>
+        <a class="pill" href="assets/vc-section-one.pdf" target="_blank" rel="noopener">Presentation</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero card">
-      <div class="hero__copy">
-        <h1 class="hero__title">Build fast. Ship clean. Get paid.</h1>
-        <p class="hero__sub">
+  <main class="page">
+    <section id="intro" class="heroCard" aria-label="Intro section">
+      <div class="heroCopy">
+        <h1>Build fast. Ship clean. Get paid.</h1>
+        <p class="sub">
           Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
         </p>
       </div>
 
-      <!-- Intro Video (ONLY thing on landing besides headline) -->
       <div class="videoCard" aria-label="Intro video">
-        <div class="videoCard__top">
+        <div class="videoCardTop">
           <span class="chip">INTRO VIDEO</span>
-          <span class="chip chip--ghost">≈ 5:00</span>
+          <span class="chip chipRight">≈ 5:00</span>
         </div>
 
-        <!-- Option A: YouTube embed (recommended for now) -->
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0&modestbranding=1"
-            title="Vibe’n Intro"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <div class="videoFrameWrap">
+          <!-- Local MP4 -->
+          <video
+            class="videoFrame"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/bg-room.PNG"
+          >
+            <source src="assets/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
-        <!-- Option B: Self-hosted MP4 (uncomment if you upload assets/INTRO.MP4)
-        <div class="video">
-          <video controls playsinline preload="metadata" src="./assets/INTRO.MP4"></video>
+        <div class="videoHint">
+          <span class="dot"></span>
+          <span>No fluff. Proof build mindset.</span>
         </div>
-        -->
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__inner">
-      Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect
-    </div>
+    <span>Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect</span>
   </footer>
 </body>
 </html>
+
