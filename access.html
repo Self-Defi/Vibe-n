@@ -1,57 +1,70 @@
-<!doctype html>
+<!-- access.html (Wallet Connect) -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wallet Connect — Vibe’n</title>
+  <title>Vibe’n — Wallet Connect</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <div class="bg" aria-hidden="true"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-        <div class="brandText">
-          <b>Vibe’n</b>
-          <span>Wallet verification gate</span>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
+      <div class="brandCopy">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandTag">5-minute intro. Pay once. Unlock the gated course.</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="navPill" href="./index.html#intro">Intro</a>
+      <a class="navPill active" href="./access.html">Wallet Connect</a>
+      <a class="navPill" href="./fiat.html">Fiat Payment</a>
+      <a class="navPill" href="./crypto.html">Crypto Payment</a>
+      <a class="navPill" href="./buy-crypto.html">Buy Crypto</a>
+      <a class="navPill" href="./assets/vc-section-one.pdf" target="_blank" rel="noreferrer">Section 1</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card hero">
+      <h1>Wallet Connect</h1>
+      <p class="sub">Use this after you’ve paid. You’ll verify purchase, then unlock access.</p>
+
+      <div class="videoCard">
+        <div class="videoTop">
+          <span class="chip">STEP</span>
+          <span class="chip chipSoft">Connect → Verify → Unlock</span>
+        </div>
+
+        <div style="padding: 10px 2px 2px; color: rgba(255,255,255,.86); line-height:1.6;">
+          <ol style="margin:0; padding-left: 18px;">
+            <li>Complete <strong>Fiat</strong> or <strong>Crypto</strong> payment.</li>
+            <li>Keep your <strong>receipt</strong> (fiat) or <strong>tx hash</strong> (crypto).</li>
+            <li>Connect wallet (WalletConnect button / gate on your platform).</li>
+            <li>Submit proof (receipt ID / tx hash) → access is granted.</li>
+          </ol>
+          <p style="margin: 10px 0 0; color: rgba(255,255,255,.65);">
+            Rule: the network must match the invoice network (if crypto).
+          </p>
+        </div>
+
+        <div class="videoFoot" style="margin-top:12px;">
+          <span class="hintDot" aria-hidden="true"></span>
+          <span class="hint">If you’re not sure, slow down and verify the network before sending.</span>
+          <a class="ghostBtn" href="./crypto.html">Crypto steps →</a>
         </div>
       </div>
+    </section>
+  </main>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html#intro">Intro</a>
-        <a class="active" href="./access.html">Wallet Connect</a>
-        <a href="./fiat.html">Fiat Payment</a>
-        <a href="./crypto.html">Crypto Payment</a>
-        <a href="./buy-crypto.html">Buy Crypto</a>
-        <a href="./presentation.html">Presentation</a>
-      </nav>
-    </header>
-
-    <main class="card">
-      <div class="cardInner">
-        <h1 class="pageTitle">Wallet Connect</h1>
-        <p class="pageLead">After you pay, connect your wallet and confirm proof (receipt / tx hash). This is the access gate.</p>
-
-        <ol class="steps">
-          <li>Complete payment (Fiat or Crypto).</li>
-          <li>Save your proof: <b>receipt</b> (fiat) or <b>tx hash</b> (crypto).</li>
-          <li>Tap your connect button (WalletConnect / on-site gate) and verify.</li>
-        </ol>
-
-        <div class="actions">
-          <a class="btn btnPrimary" href="./index.html#intro">Back to Intro</a>
-          <a class="btn" href="./fiat.html">Fiat Payment →</a>
-          <a class="btn" href="./crypto.html">Crypto Payment →</a>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
-    </footer>
-  </div>
+  <footer class="footer">
+    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
 
