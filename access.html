@@ -6,44 +6,52 @@
   <title>Wallet Connect — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="page">
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">Wallet verification (gate).</div>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandText">
+          <b>Vibe’n</b>
+          <span>Wallet verification gate</span>
         </div>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__pill" href="./index.html">Intro</a>
-        <a class="nav__pill is-active" href="./access.html">Wallet Connect</a>
-        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="./presentation.html">Presentation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="card hero">
-      <h1 class="hero__title">Connect wallet to unlock</h1>
-      <p class="hero__sub">This button is your gate. Wire to WalletConnect / wagmi later.</p>
-
-      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="nav__pill" href="#" onclick="alert('Hook WalletConnect here.'); return false;">Wallet Connect (Gate) →</a>
       </div>
 
-      <p class="hero__sub" style="margin-top:16px;">
-        Once connected, you’ll validate purchase (token/NFT/allowlist/tx hash) then reveal content.
-      </p>
-    </section>
-  </main>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html#intro">Intro</a>
+        <a class="active" href="./access.html">Wallet Connect</a>
+        <a href="./fiat.html">Fiat Payment</a>
+        <a href="./crypto.html">Crypto Payment</a>
+        <a href="./buy-crypto.html">Buy Crypto</a>
+        <a href="./presentation.html">Presentation</a>
+      </nav>
+    </header>
 
-  <footer class="footer">
-    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
-  </footer>
+    <main class="card">
+      <div class="cardInner">
+        <h1 class="pageTitle">Wallet Connect</h1>
+        <p class="pageLead">After you pay, connect your wallet and confirm proof (receipt / tx hash). This is the access gate.</p>
+
+        <ol class="steps">
+          <li>Complete payment (Fiat or Crypto).</li>
+          <li>Save your proof: <b>receipt</b> (fiat) or <b>tx hash</b> (crypto).</li>
+          <li>Tap your connect button (WalletConnect / on-site gate) and verify.</li>
+        </ol>
+
+        <div class="actions">
+          <a class="btn btnPrimary" href="./index.html#intro">Back to Intro</a>
+          <a class="btn" href="./fiat.html">Fiat Payment →</a>
+          <a class="btn" href="./crypto.html">Crypto Payment →</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
+    </footer>
+  </div>
 </body>
 </html>
+
