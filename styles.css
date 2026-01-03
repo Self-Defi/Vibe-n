@@ -136,12 +136,6 @@ body{
   line-height: 1.04;
   letter-spacing: -0.6px;
 }
-.heroSub{
-  margin: 10px 0 18px;
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 62ch;
-}
 
 /* Video block */
 .videoCard{
