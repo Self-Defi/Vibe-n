@@ -6,45 +6,53 @@
   <title>Crypto Payment — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="page">
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">USDC / ETH (Coinbase Commerce or EVM).</div>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandText">
+          <b>Vibe’n</b>
+          <span>USDC / ETH (EVM)</span>
         </div>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__pill" href="./index.html">Intro</a>
-        <a class="nav__pill" href="./access.html">Wallet Connect</a>
-        <a class="nav__pill" href="./fiat.html">Fiat Payment</a>
-        <a class="nav__pill is-active" href="./crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="./presentation.html">Presentation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="card hero">
-      <h1 class="hero__title">Crypto Pay</h1>
-      <p class="hero__sub">Pay with USDC/ETH. Network must match invoice network.</p>
-
-      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="nav__pill" href="#" onclick="alert('Paste Coinbase Commerce / invoice link here.'); return false;">Open Crypto Invoice →</a>
       </div>
 
-      <p class="hero__sub" style="margin-top:16px;">
-        After payment: save tx hash → go to <a href="./access.html" style="color:rgba(255,255,255,.86);">Wallet Connect</a>.
-      </p>
-    </section>
-  </main>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html#intro">Intro</a>
+        <a href="./access.html">Wallet Connect</a>
+        <a href="./fiat.html">Fiat Payment</a>
+        <a class="active" href="./crypto.html">Crypto Payment</a>
+        <a href="./buy-crypto.html">Buy Crypto</a>
+        <a href="./presentation.html">Presentation</a>
+      </nav>
+    </header>
 
-  <footer class="footer">
-    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
-  </footer>
+    <main class="card">
+      <div class="cardInner">
+        <h1 class="pageTitle">Crypto Pay</h1>
+        <p class="pageLead">Send crypto on the correct network. Save your tx hash.</p>
+
+        <ol class="steps">
+          <li>Confirm the required network (Base / Ethereum / Polygon) matches the invoice.</li>
+          <li>Send USDC/ETH to the provided address.</li>
+          <li>Copy the <b>tx hash</b> for proof.</li>
+          <li>Go to <b>Wallet Connect</b> to verify access.</li>
+        </ol>
+
+        <div class="actions">
+          <!-- Replace # with your real payment address / invoice link -->
+          <a class="btn btnPrimary" href="#" target="_blank" rel="noreferrer">Open Payment Details →</a>
+          <a class="btn" href="./access.html">Go to Wallet Connect →</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
+    </footer>
+  </div>
 </body>
 </html>
 
