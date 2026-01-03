@@ -1,58 +1,72 @@
-<!doctype html>
+<!-- crypto.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crypto Payment — Vibe’n</title>
+  <title>Vibe’n — Crypto Payment</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <div class="bg" aria-hidden="true"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-        <div class="brandText">
-          <b>Vibe’n</b>
-          <span>USDC / ETH (EVM)</span>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
+      <div class="brandCopy">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandTag">5-minute intro. Pay once. Unlock the gated course.</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="navPill" href="./index.html#intro">Intro</a>
+      <a class="navPill" href="./access.html">Wallet Connect</a>
+      <a class="navPill" href="./fiat.html">Fiat Payment</a>
+      <a class="navPill active" href="./crypto.html">Crypto Payment</a>
+      <a class="navPill" href="./buy-crypto.html">Buy Crypto</a>
+      <a class="navPill" href="./assets/vc-section-one.pdf" target="_blank" rel="noreferrer">Section 1</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card hero">
+      <h1>Crypto Pay</h1>
+      <p class="sub">USDC / ETH — match the network on the invoice. Keep the tx hash.</p>
+
+      <div class="videoCard">
+        <div class="videoTop">
+          <span class="chip">CRYPTO</span>
+          <span class="chip chipSoft">USDC / ETH</span>
+        </div>
+
+        <div style="padding: 10px 2px 2px; color: rgba(255,255,255,.86); line-height:1.6;">
+          <ol style="margin:0; padding-left: 18px;">
+            <li>Confirm which network the invoice requires (Base / Ethereum / Polygon, etc.).</li>
+            <li>Send <strong>exact amount</strong> to the provided address.</li>
+            <li>Double-check address + network before confirming.</li>
+            <li>Save the <strong>tx hash</strong> (proof).</li>
+            <li>Go to <strong>Wallet Connect</strong> and verify access.</li>
+          </ol>
+
+          <!-- Replace this href with your real Coinbase Commerce / invoice URL -->
+          <p style="margin: 12px 0 0;">
+            <a class="ghostBtn" href="#" target="_blank" rel="noreferrer">Open Crypto Invoice →</a>
+          </p>
+
+          <p style="margin: 10px 0 0; color: rgba(255,255,255,.65);">
+            If you mess up network = funds can be stuck. Slow down here.
+          </p>
         </div>
       </div>
+    </section>
+  </main>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html#intro">Intro</a>
-        <a href="./access.html">Wallet Connect</a>
-        <a href="./fiat.html">Fiat Payment</a>
-        <a class="active" href="./crypto.html">Crypto Payment</a>
-        <a href="./buy-crypto.html">Buy Crypto</a>
-        <a href="./presentation.html">Presentation</a>
-      </nav>
-    </header>
-
-    <main class="card">
-      <div class="cardInner">
-        <h1 class="pageTitle">Crypto Pay</h1>
-        <p class="pageLead">Send crypto on the correct network. Save your tx hash.</p>
-
-        <ol class="steps">
-          <li>Confirm the required network (Base / Ethereum / Polygon) matches the invoice.</li>
-          <li>Send USDC/ETH to the provided address.</li>
-          <li>Copy the <b>tx hash</b> for proof.</li>
-          <li>Go to <b>Wallet Connect</b> to verify access.</li>
-        </ol>
-
-        <div class="actions">
-          <!-- Replace # with your real payment address / invoice link -->
-          <a class="btn btnPrimary" href="#" target="_blank" rel="noreferrer">Open Payment Details →</a>
-          <a class="btn" href="./access.html">Go to Wallet Connect →</a>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
-    </footer>
-  </div>
+  <footer class="footer">
+    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
+
 
