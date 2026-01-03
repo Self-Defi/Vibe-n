@@ -1,56 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Crypto Payment</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="bg"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-        <div class="brandTitle">
-          <strong>Vibe’n</strong>
-          <span>USDC / ETH (Coinbase Commerce)</span>
-        </div>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+      <div class="brandText">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandTag">USDC / ETH (invoice network must match).</div>
       </div>
+    </div>
 
-      <nav class="nav">
-        <a class="pill" href="index.html#intro">Intro</a>
-        <a class="pill" href="access.html">Wallet Connect</a>
-        <a class="pill" href="fiat.html">Fiat Payment</a>
-        <a class="pill active" href="crypto.html">Crypto Payment</a>
-        <a class="pill" href="buy-crypto.html">Buy Crypto</a>
-        <a class="pill" href="section1.html">Section 1</a>
-      </nav>
-    </header>
+    <nav class="navPills" aria-label="Primary">
+      <a class="pill" href="index.html">Intro</a>
+      <a class="pill" href="access.html">Wallet Connect</a>
+      <a class="pill" href="fiat.html">Fiat Payment</a>
+      <a class="pill isActive" href="crypto.html">Crypto Payment</a>
+      <a class="pill" href="wallet-setup.html">Wallet Setup</a>
+    </nav>
+  </header>
 
-    <main class="card page">
-      <h2>Crypto Pay</h2>
-      <p>Pay with USDC/ETH. The network must match the invoice network.</p>
+  <main class="wrap">
+    <section class="card page">
+      <h1 class="pageTitle">Crypto Pay</h1>
+      <p class="pageSub">Pay the invoice, save the tx hash, then verify on Wallet Connect.</p>
 
       <ol class="steps">
-        <li><strong>Open invoice</strong> (Coinbase Commerce link).</li>
-        <li><strong>Select network</strong> exactly as shown on the invoice.</li>
-        <li><strong>Send</strong> the exact amount to the invoice address.</li>
-        <li><strong>Save tx hash</strong> (proof).</li>
-        <li><strong>Go to Wallet Connect</strong> → verify tx hash → unlock.</li>
+        <li>Open the crypto invoice link (Coinbase Commerce or your rail).</li>
+        <li>Select the correct asset (USDC / ETH) required by the invoice.</li>
+        <li><strong>Confirm network</strong> exactly matches the invoice network.</li>
+        <li>Send payment → <strong>save tx hash</strong>.</li>
+        <li>Go to <strong>Wallet Connect</strong> → submit tx hash → unlock.</li>
       </ol>
 
-      <div class="ctaRow">
-        <a class="btn primary" href="#" target="_blank" rel="noopener">Open Coinbase Commerce →</a>
-        <a class="btn" href="access.html">Go to Wallet Connect →</a>
+      <div class="callouts">
+        <!-- Replace # with your real invoice URL -->
+        <a class="btn" href="#" target="_blank" rel="noopener">Open Crypto Invoice →</a>
+        <a class="btn ghost" href="access.html">Go to Wallet Connect →</a>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <div class="footer">
-      Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
-    </div>
-  </div>
+  <footer class="footer">
+    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
 
