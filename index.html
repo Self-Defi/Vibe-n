@@ -1,61 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Pay once. Unlock the gated course.</title>
+  <meta name="description" content="Vibe’n — 5-minute intro. Pay once. Unlock the gated course." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="bg"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-        <div class="brandTitle">
-          <strong>Vibe’n</strong>
-          <span>5-minute intro. Pay once. Unlock the gated course.</span>
-        </div>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+      <div class="brandText">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandTag">5-minute intro. Pay once. Unlock the gated course.</div>
       </div>
+    </div>
 
-      <nav class="nav">
-        <a class="pill active" href="index.html#intro">Intro</a>
-        <a class="pill" href="access.html">Wallet Connect</a>
-        <a class="pill" href="fiat.html">Fiat Payment</a>
-        <a class="pill" href="crypto.html">Crypto Payment</a>
-        <a class="pill" href="buy-crypto.html">Buy Crypto</a>
-        <a class="pill" href="section1.html">Section 1</a>
-      </nav>
-    </header>
+    <nav class="navPills" aria-label="Primary">
+      <a class="pill isActive" href="index.html">Intro</a>
+      <a class="pill" href="access.html">Wallet Connect</a>
+      <a class="pill" href="fiat.html">Fiat Payment</a>
+      <a class="pill" href="crypto.html">Crypto Payment</a>
+      <a class="pill" href="wallet-setup.html">Wallet Setup</a>
+    </nav>
+  </header>
 
-    <main class="card hero" id="intro">
-      <h1>Build fast. Ship clean. Get paid.</h1>
-      <p>Watch the intro, then choose a payment rail. Keep your receipt / tx hash.</p>
+  <main class="wrap">
+    <section class="card hero">
+      <h1 class="heroTitle">Build fast. Ship clean. Get paid.</h1>
+      <p class="heroSub">
+        Watch the intro, then choose a payment rail. Keep your receipt / tx hash.
+      </p>
 
-      <section class="videoBlock" aria-label="Intro video">
-        <div class="videoHeader">
-          <span class="chip">Intro Video</span>
-          <span class="chip">≈ 5:00</span>
+      <div class="videoCard">
+        <div class="videoTop">
+          <span class="chip">INTRO VIDEO</span>
+          <span class="chip chipGhost">≈ 5:00</span>
         </div>
 
-        <div class="videoWrap">
-          <video
-            src="assets/intro.mp4"
-            controls
-            playsinline
-            preload="metadata"
-          >
-            Your browser doesn’t support the video tag.
+        <div class="videoFrame">
+          <video class="video" controls preload="metadata" playsinline poster="assets/bg-viben-03.PNG">
+            <source src="assets/intro.mp4" type="video/mp4" />
+            Your browser doesn’t support HTML5 video.
           </video>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <div class="footer">
-      Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
-    </div>
-  </div>
+  <footer class="footer">
+    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
 
