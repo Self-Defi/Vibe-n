@@ -1,55 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Wallet Connect</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="bg"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <img src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
-        <div class="brandTitle">
-          <strong>Vibe’n</strong>
-          <span>Verify purchase → unlock access</span>
-        </div>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+      <div class="brandText">
+        <div class="brandName">Vibe’n</div>
+        <div class="brandTag">Verify purchase → unlock gated content.</div>
       </div>
+    </div>
 
-      <nav class="nav">
-        <a class="pill" href="index.html#intro">Intro</a>
-        <a class="pill active" href="access.html">Wallet Connect</a>
-        <a class="pill" href="fiat.html">Fiat Payment</a>
-        <a class="pill" href="crypto.html">Crypto Payment</a>
-        <a class="pill" href="buy-crypto.html">Buy Crypto</a>
-        <a class="pill" href="section1.html">Section 1</a>
-      </nav>
-    </header>
+    <nav class="navPills" aria-label="Primary">
+      <a class="pill" href="index.html">Intro</a>
+      <a class="pill isActive" href="access.html">Wallet Connect</a>
+      <a class="pill" href="fiat.html">Fiat Payment</a>
+      <a class="pill" href="crypto.html">Crypto Payment</a>
+      <a class="pill" href="wallet-setup.html">Wallet Setup</a>
+    </nav>
+  </header>
 
-    <main class="card page">
-      <h2>Wallet Connect</h2>
-      <p>After you pay, you’ll verify purchase, then unlock access.</p>
+  <main class="wrap">
+    <section class="card page">
+      <h1 class="pageTitle">Wallet Connect</h1>
+      <p class="pageSub">After you pay, you’ll verify purchase, then unlock access.</p>
 
       <ol class="steps">
-        <li><strong>Complete Fiat or Crypto payment</strong>.</li>
-        <li><strong>Save proof</strong> (receipt ID for fiat, tx hash for crypto).</li>
-        <li><strong>Connect wallet</strong> (this is your gate button on your platform/app).</li>
-        <li><strong>Verify proof</strong> (receipt / tx hash) → access is granted.</li>
+        <li>Complete <strong>Fiat</strong> or <strong>Crypto</strong> payment.</li>
+        <li>Save proof: <strong>receipt</strong> (fiat) or <strong>tx hash</strong> (crypto).</li>
+        <li>Connect wallet (your gating button / portal).</li>
+        <li>Submit proof (receipt ID / tx hash) → access is granted.</li>
+        <li>If crypto: confirm the <strong>network matches</strong> the invoice network before sending.</li>
       </ol>
 
-      <div class="ctaRow">
-        <a class="btn primary" href="#" target="_blank" rel="noopener">Open Wallet Connect Gate →</a>
-        <a class="btn" href="crypto.html">Need crypto steps →</a>
+      <div class="callouts">
+        <a class="btn" href="crypto.html">Crypto steps →</a>
+        <a class="btn ghost" href="fiat.html">Fiat steps →</a>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <div class="footer">
-      Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
-    </div>
-  </div>
+  <footer class="footer">
+    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
+  </footer>
 </body>
 </html>
+
 
