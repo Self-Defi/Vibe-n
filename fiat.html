@@ -6,44 +6,52 @@
   <title>Fiat Payment — Vibe’n</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="page">
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Vibe’n Home">
-        <img class="brand__logo" src="./assets/vc-logo-transparent.PNG" alt="Vibe Coding" />
-        <div class="brand__text">
-          <div class="brand__name">Vibe’n</div>
-          <div class="brand__tag">Card / Apple Pay (Stripe).</div>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandText">
+          <b>Vibe’n</b>
+          <span>Card / Apple Pay (Stripe)</span>
         </div>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__pill" href="./index.html">Intro</a>
-        <a class="nav__pill" href="./access.html">Wallet Connect</a>
-        <a class="nav__pill is-active" href="./fiat.html">Fiat Payment</a>
-        <a class="nav__pill" href="./crypto.html">Crypto Payment</a>
-        <a class="nav__pill" href="./buy-crypto.html">Buy Crypto</a>
-        <a class="nav__pill" href="./presentation.html">Presentation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="card hero">
-      <h1 class="hero__title">Fiat Pay</h1>
-      <p class="hero__sub">Fastest checkout. Use Stripe link / hosted checkout.</p>
-
-      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="nav__pill" href="#" onclick="alert('Paste Stripe checkout link here.'); return false;">Open Stripe Checkout →</a>
       </div>
 
-      <p class="hero__sub" style="margin-top:16px;">
-        After payment: save receipt → go to <a href="./access.html" style="color:rgba(255,255,255,.86);">Wallet Connect</a>.
-      </p>
-    </section>
-  </main>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html#intro">Intro</a>
+        <a href="./access.html">Wallet Connect</a>
+        <a class="active" href="./fiat.html">Fiat Payment</a>
+        <a href="./crypto.html">Crypto Payment</a>
+        <a href="./buy-crypto.html">Buy Crypto</a>
+        <a href="./presentation.html">Presentation</a>
+      </nav>
+    </header>
 
-  <footer class="footer">
-    <div class="footer__inner">Powered By <span class="footer__strong">Self Defi</span> · Digital Infrastructure Architect</div>
-  </footer>
+    <main class="card">
+      <div class="cardInner">
+        <h1 class="pageTitle">Fiat Pay</h1>
+        <p class="pageLead">Fastest checkout. Use your Stripe link / hosted checkout.</p>
+
+        <ol class="steps">
+          <li>Open your Stripe checkout link.</li>
+          <li>Pay with Card / Apple Pay.</li>
+          <li>Save the receipt (screenshot or email receipt).</li>
+          <li>Go to <b>Wallet Connect</b> to verify access.</li>
+        </ol>
+
+        <div class="actions">
+          <!-- Replace # with your real Stripe URL -->
+          <a class="btn btnPrimary" href="#" target="_blank" rel="noreferrer">Open Stripe Checkout →</a>
+          <a class="btn" href="./access.html">Go to Wallet Connect →</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Powered By <b>Self Defi</b> · Digital Infrastructure Architect
+    </footer>
+  </div>
 </body>
 </html>
