@@ -1,69 +1,54 @@
-<!-- fiat.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vibe’n — Fiat Payment</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="bg" aria-hidden="true"></div>
+  <div class="bg"></div>
 
-  <header class="topbar">
-    <div class="brand">
-      <img class="brandLogo" src="./assets/vc-logo-transparent.PNG" alt="Vibe’n logo" />
-      <div class="brandCopy">
-        <div class="brandName">Vibe’n</div>
-        <div class="brandTag">5-minute intro. Pay once. Unlock the gated course.</div>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
+        <div class="brandTitle">
+          <strong>Vibe’n</strong>
+          <span>Card / Apple Pay (Stripe)</span>
+        </div>
       </div>
+
+      <nav class="nav">
+        <a class="pill" href="index.html#intro">Intro</a>
+        <a class="pill" href="access.html">Wallet Connect</a>
+        <a class="pill active" href="fiat.html">Fiat Payment</a>
+        <a class="pill" href="crypto.html">Crypto Payment</a>
+        <a class="pill" href="buy-crypto.html">Buy Crypto</a>
+        <a class="pill" href="section1.html">Section 1</a>
+      </nav>
+    </header>
+
+    <main class="card page">
+      <h2>Fiat Pay</h2>
+      <p>Fastest checkout. Use Stripe link / hosted checkout.</p>
+
+      <ol class="steps">
+        <li><strong>Open checkout</strong> (Stripe).</li>
+        <li><strong>Pay</strong> with card / Apple Pay.</li>
+        <li><strong>Save receipt</strong> (receipt ID / confirmation email).</li>
+        <li><strong>Go to Wallet Connect</strong> and verify → unlock.</li>
+      </ol>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#" target="_blank" rel="noopener">Open Stripe Checkout →</a>
+        <a class="btn" href="access.html">Go to Wallet Connect →</a>
+      </div>
+    </main>
+
+    <div class="footer">
+      Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
     </div>
-
-    <nav class="nav">
-      <a class="navPill" href="./index.html#intro">Intro</a>
-      <a class="navPill" href="./access.html">Wallet Connect</a>
-      <a class="navPill active" href="./fiat.html">Fiat Payment</a>
-      <a class="navPill" href="./crypto.html">Crypto Payment</a>
-      <a class="navPill" href="./buy-crypto.html">Buy Crypto</a>
-      <a class="navPill" href="./assets/vc-section-one.pdf" target="_blank" rel="noreferrer">Section 1</a>
-    </nav>
-  </header>
-
-  <main class="wrap">
-    <section class="card hero">
-      <h1>Fiat Pay</h1>
-      <p class="sub">Fastest checkout. Use Stripe link / hosted checkout.</p>
-
-      <div class="videoCard">
-        <div class="videoTop">
-          <span class="chip">FIAT</span>
-          <span class="chip chipSoft">Card / Apple Pay</span>
-        </div>
-
-        <div style="padding: 10px 2px 2px; color: rgba(255,255,255,.86); line-height:1.6;">
-          <ol style="margin:0; padding-left: 18px;">
-            <li>Open the Stripe checkout link.</li>
-            <li>Pay with card / Apple Pay.</li>
-            <li>Save the receipt / confirmation.</li>
-            <li>Go to <strong>Wallet Connect</strong> and verify access.</li>
-          </ol>
-
-          <!-- Replace this href with your real Stripe URL -->
-          <p style="margin: 12px 0 0;">
-            <a class="ghostBtn" href="#" target="_blank" rel="noreferrer">Open Stripe Checkout →</a>
-          </p>
-
-          <p style="margin: 10px 0 0; color: rgba(255,255,255,.65);">
-            After payment: save receipt → go to <a href="./access.html" style="color:rgba(255,255,255,.86);">Wallet Connect</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
-  </footer>
+  </div>
 </body>
 </html>
