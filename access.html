@@ -13,7 +13,7 @@
       <img class="brandLogo" src="assets/vc-logo-transparent.PNG" alt="Vibe’n" />
       <div class="brandText">
         <div class="brandName">Vibe’n</div>
-        <div class="brandTag">Verify purchase → unlock gated content.</div>
+        <div class="brandTag">Verify purchase → unlock access.</div>
       </div>
     </div>
 
@@ -29,19 +29,42 @@
   <main class="wrap">
     <section class="card page">
       <h1 class="pageTitle">Wallet Connect</h1>
-      <p class="pageSub">After you pay, you’ll verify purchase, then unlock access.</p>
+      <p class="pageSub">After you’ve paid, verify purchase, then unlock access.</p>
+
+      <div id="paidBanner" class="notice ok" style="display:none;">
+        Payment completed. Paste your Stripe receipt ID (fiat) or tx hash (crypto), then connect wallet to unlock.
+      </div>
 
       <ol class="steps">
-        <li>Complete <strong>Fiat</strong> or <strong>Crypto</strong> payment.</li>
-        <li>Save proof: <strong>receipt</strong> (fiat) or <strong>tx hash</strong> (crypto).</li>
-        <li>Connect wallet (your gating button / portal).</li>
-        <li>Submit proof (receipt ID / tx hash) → access is granted.</li>
-        <li>If crypto: confirm the <strong>network matches</strong> the invoice network before sending.</li>
+        <li>Confirm you completed <strong>Fiat</strong> or <strong>Crypto</strong> payment.</li>
+        <li>Enter your proof below: <strong>Stripe receipt ID</strong> (fiat) or <strong>tx hash</strong> (crypto).</li>
+        <li>Connect wallet to unlock purchased content.</li>
       </ol>
 
+      <div class="formGrid">
+        <label class="field">
+          <span class="fieldLabel">Receipt ID (Stripe) or Tx Hash</span>
+          <input
+            class="input"
+            id="proofInput"
+            type="text"
+            placeholder="Fiat: pi_... or ch_... (from Stripe confirmation) • Crypto: 0x..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="fieldHint">
+            Fiat: use the ID from your Stripe confirmation email (often starts with <strong>pi_</strong> or <strong>ch_</strong>).
+            Crypto: paste the transaction hash from your wallet/explorer.
+          </span>
+        </label>
+      </div>
+
       <div class="callouts">
-        <a class="btn" href="crypto.html">Crypto steps →</a>
-        <a class="btn ghost" href="fiat.html">Fiat steps →</a>
+        <button class="btn" type="button"
+          onclick="alert('Wallet connect flow goes here (your WalletConnect integration / gated app).')">
+          Connect Wallet →
+        </button>
+        <a class="btn ghost" href="fiat.html">Need to pay with Card/Apple Pay →</a>
       </div>
     </section>
   </main>
@@ -49,6 +72,23 @@
   <footer class="footer">
     Powered By <strong>Self Defi</strong> · Digital Infrastructure Architect
   </footer>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const banner = document.getElementById("paidBanner");
+
+      // Show banner when Stripe redirects back (your link likely includes some querystring)
+      // We trigger on common signals: src=stripe OR any "session" param OR "payment" hints.
+      const src = params.get("src");
+      const hasSession = params.has("session_id") || params.has("session") || params.has("checkout");
+      const hasStripeHint = params.has("stripe") || params.has("payment");
+
+      if (banner && (src === "stripe" || hasSession || hasStripeHint || params.toString().length > 0)) {
+        banner.style.display = "block";
+      }
+    })();
+  </script>
 </body>
 </html>
 
