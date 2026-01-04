@@ -29,20 +29,25 @@
   <main class="wrap">
     <section class="card page">
       <h1 class="pageTitle">Fiat Pay</h1>
-      <p class="pageSub">Card / Apple Pay. Use your Stripe link / hosted checkout.</p>
+      <p class="pageSub">Card / Apple Pay via Stripe hosted checkout.</p>
 
       <ol class="steps">
-        <li>Open the Stripe checkout link.</li>
+        <li>Open Stripe checkout.</li>
         <li>Pay with Card / Apple Pay.</li>
-        <li>Save the receipt / confirmation email.</li>
-        <li>Go to <strong>Wallet Connect</strong> and verify purchase.</li>
+        <li>Save your receipt / confirmation email.</li>
+        <li>After payment, Stripe redirects you back to <strong>Wallet Connect</strong>.</li>
       </ol>
 
       <div class="callouts">
-        <!-- Replace # with your real Stripe checkout URL -->
-        <a class="btn" href="#" target="_blank" rel="noopener">Open Stripe Checkout →</a>
+        <a class="btn" href="https://buy.stripe.com/fZu14oe8E6Pp14Aa8l3wQ03">
+          Open Stripe Checkout →
+        </a>
         <a class="btn ghost" href="access.html">Go to Wallet Connect →</a>
       </div>
+
+      <p class="pageHint">
+        If redirect doesn’t happen, open <strong>Wallet Connect</strong> and paste your Stripe receipt ID.
+      </p>
     </section>
   </main>
 
