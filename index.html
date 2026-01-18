@@ -38,12 +38,17 @@
         <div class="videoFrame">
           <video
             class="video"
-            src="assets/intro.mp4"
             controls
             playsinline
             preload="metadata"
             poster="assets/bg-viben-03.PNG"
-          ></video>
+          >
+            <!-- Primary (versioned, cache-safe) -->
+            <source src="assets/intro-v2.mp4" type="video/mp4" />
+            <!-- Fallback -->
+            <source src="assets/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>
